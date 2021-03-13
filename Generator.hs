@@ -257,11 +257,11 @@ blackboardBold =
   , "by" --> "𝕪"
   , "bz" --> "𝕫"
   
-  , "bGG" --> "ℾ"
-  , "bGP" --> "ℿ"
-  , "bGS" --> "⅀"
-  , "bGg" --> "ℽ"
-  , "bGp" --> "ℼ"
+  , "bGamma" --> "ℾ"
+  , "bPi" --> "ℿ"
+  , "bSigma" --> "⅀"
+  , "bgamma" --> "ℽ"
+  , "bpi" --> "ℼ"
   ]
 
 blackboardBoldDigit :: [(String, String)]

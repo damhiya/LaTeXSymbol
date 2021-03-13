@@ -80,7 +80,7 @@ relationOperator =
   , "lesssim" --> "≲"
   , "lessapprox" --> "⪅"
   , "prec" --> "≺"
-  , "preceq" --> "≼"
+  , "preceq" --> "⪯" -- ≼
   , "precsim" --> "≾"
 
   , "geq" --> "≥"
@@ -89,7 +89,7 @@ relationOperator =
   , "gtrsim" --> "≳"
   , "gtrapprox" --> "⪆"
   , "succ" --> "≻"
-  , "succeq" --> "≽"
+  , "succeq" --> "⪰" -- ≽
   , "succsim" --> "≿"
 
   , "nless" --> "≮"
@@ -99,7 +99,7 @@ relationOperator =
   , "lnsim" --> "⋦"
   , "lnapprox" --> "⪉"
   , "nprec" --> "⊀"
-  , "npreceq" --> "⋠"
+  , "npreceq" --> "⪯̸" -- ⋠
   -- no nleqslant
 
   , "ngtr" --> "≯"
@@ -109,7 +109,7 @@ relationOperator =
   , "gnsim" --> "⋧"
   , "gnapprox" --> "⪊"
   , "nsucc" --> "⊁"
-  , "nsucceq" --> "⋡"
+  , "nsucceq" --> "⪰̸" -- ⋡
   -- no ngeqslant
   
   , "ll" --> "≪"

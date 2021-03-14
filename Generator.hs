@@ -43,7 +43,7 @@ symbols = latexUnaryOperator
 
 main :: IO ()
 main = do
-  let jsonPairs = map (\(x,y) -> "[\"" ++ x ++ "\",\"" ++ y ++ "\"]") symbols
+  let jsonPairs = map (\(x,y) -> "{\"key\":\"" ++ x ++ "\",\"value\":\"" ++ y ++ "\"}") symbols
   f <- openFile "symbols.json" WriteMode
   hPutStr f "[ "
   hPutStrLn f (intercalate "\n, " jsonPairs)

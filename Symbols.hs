@@ -1,7 +1,12 @@
 module Symbols where
 
+import Data.Bifunctor
+
 (-->) :: a -> b -> (a,b)
 (-->) = (,)
+
+prefix :: String -> (String, String) -> (String, String)
+prefix p = first (p++)
 
 -- | LaTeX-Compatible Symbols
 latexUnaryOperator :: [(String, String)]
@@ -269,7 +274,7 @@ greek =
 -- monospace digit
 
 mathBold :: [(String, String)]
-mathBold =
+mathBold = map (prefix "b")
   [ "A" --> "\x1d400" -- 𝐀
   , "B" --> "\x1d401"
   , "C" --> "\x1d402"
@@ -326,7 +331,7 @@ mathBold =
   ]
 
 mathItalic :: [(String, String)]
-mathItalic =
+mathItalic = map (prefix "it")
   [ "A" --> "\x1d434" -- 𝐴
   , "B" --> "\x1d435" -- 𝐵
   , "C" --> "\x1d436" -- 𝐶
@@ -383,7 +388,7 @@ mathItalic =
   ]
 
 mathBoldItalic :: [(String, String)]
-mathBoldItalic =
+mathBoldItalic = map (prefix "bit")
   [ "A" --> "𝑨"
   , "B" --> "𝑩"
   , "C" --> "𝑪"
@@ -440,7 +445,7 @@ mathBoldItalic =
   ]
 
 mathScript :: [(String, String)]
-mathScript =
+mathScript = map (prefix "scr")
   [ "A" --> "𝒜"
   , "B" --> "ℬ"
   , "C" --> "𝒞"
@@ -497,7 +502,7 @@ mathScript =
   ]
 
 mathBoldScript :: [(String, String)]
-mathBoldScript =
+mathBoldScript = map (prefix "cal")
   [ "A" --> "𝓐"
   , "B" --> "𝓑"
   , "C" --> "𝓒"
@@ -554,7 +559,7 @@ mathBoldScript =
   ]
 
 matheFraktur :: [(String, String)]
-matheFraktur =
+matheFraktur = map (prefix "frak")
   [ "A" --> "𝔄"
   , "B" --> "𝔅"
   , "C" --> "ℭ"
@@ -611,7 +616,7 @@ matheFraktur =
   ]
 
 mathDoubleStruck :: [(String, String)]
-mathDoubleStruck =
+mathDoubleStruck = map (prefix "bb")
   [ "A" --> "𝔸"
   , "B" --> "𝔹"
   , "C" --> "ℂ"
@@ -668,7 +673,7 @@ mathDoubleStruck =
   ]
 
 mathBoldFraktur :: [(String, String)]
-mathBoldFraktur =
+mathBoldFraktur = map (prefix "bfrak")
   [ "A" --> "\x1d56c"
   , "B" --> "\x1d56d"
   , "C" --> "\x1d56e"
@@ -725,7 +730,7 @@ mathBoldFraktur =
   ]
   
 mathSansSerif :: [(String, String)]
-mathSansSerif =
+mathSansSerif = map (prefix "sans")
   [ "A" --> "\x1d5a0"
   , "B" --> "\x1d5a1"
   , "C" --> "\x1d5a2"
@@ -782,7 +787,7 @@ mathSansSerif =
   ]
   
 mathSansSerifBold :: [(String, String)]
-mathSansSerifBold =
+mathSansSerifBold = map (prefix "sansb")
   [ "A" --> "\x1d5d4"
   , "B" --> "\x1d5d5"
   , "C" --> "\x1d5d6"
@@ -839,7 +844,7 @@ mathSansSerifBold =
   ]
 
 mathSansSerifItalic :: [(String, String)]
-mathSansSerifItalic =
+mathSansSerifItalic = map (prefix "sansit")
   [ "A" --> "\x1d608"
   , "B" --> "\x1d609"
   , "C" --> "\x1d60a"
@@ -896,7 +901,7 @@ mathSansSerifItalic =
   ]
 
 mathSansSerifBoldItalic :: [(String, String)]
-mathSansSerifBoldItalic =
+mathSansSerifBoldItalic = map (prefix "sansbit")
   [ "A" --> "\x1d63c"
   , "B" --> "\x1d63d"
   , "C" --> "\x1d63e"
@@ -952,8 +957,8 @@ mathSansSerifBoldItalic =
   , "z" --> "\x1d66f"
   ]
   
-mathSansMonospace :: [(String, String)]
-mathSansMonospace =
+mathMonospace :: [(String, String)]
+mathMonospace = map (prefix "mono")
   [ "A" --> "\x1d670"
   , "B" --> "\x1d671"
   , "C" --> "\x1d672"
@@ -1010,13 +1015,13 @@ mathSansMonospace =
   ]
 
 mathItalicDotless :: [(String, String)]
-mathItalicDotless =
+mathItalicDotless = map (prefix "it")
   [ "imath" --> "\x1d6a4" -- "𝚤"
   , "jmath" --> "\x1d6a5" -- "𝚥"
   ]
 
 mathBoldGreek :: [(String, String)]
-mathBoldGreek =
+mathBoldGreek = map (prefix "b")
   [ "Alpha"      --> "\x1d6a8"
   , "Beta"       --> "\x1d6a9"
   , "Gammma"     --> "\x1d6aa"
@@ -1080,7 +1085,7 @@ mathBoldGreek =
   ]
   
 mathItalicGreek :: [(String, String)]
-mathItalicGreek =
+mathItalicGreek = map (prefix "it")
   [ "Alpha"      --> "\x1d6e2"
   , "Beta"       --> "\x1d6e3"
   , "Gammma"     --> "\x1d6e4"
@@ -1144,7 +1149,7 @@ mathItalicGreek =
   ]
   
 mathBoldItalicGreek :: [(String, String)]
-mathBoldItalicGreek =
+mathBoldItalicGreek = map (prefix "bit")
   [ "Alpha"      --> "\x1d71c"
   , "Beta"       --> "\x1d71d"
   , "Gammma"     --> "\x1d71e"
@@ -1208,7 +1213,7 @@ mathBoldItalicGreek =
   ]
   
 mathSansSerifBoldGreek :: [(String, String)]
-mathSansSerifBoldGreek =
+mathSansSerifBoldGreek = map (prefix "sansb")
   [ "Alpha"      --> "\x1d756"
   , "Beta"       --> "\x1d757"
   , "Gammma"     --> "\x1d758"
@@ -1272,7 +1277,7 @@ mathSansSerifBoldGreek =
   ]
 
 mathSansSerifBoldItalicGreek :: [(String, String)]
-mathSansSerifBoldItalicGreek =
+mathSansSerifBoldItalicGreek = map (prefix "sansbit")
   [ "Alpha"      --> "\x1d790"
   , "Beta"       --> "\x1d791"
   , "Gammma"     --> "\x1d792"
@@ -1336,13 +1341,13 @@ mathSansSerifBoldItalicGreek =
   ]
 
 mathBoldDigamma :: [(String, String)]
-mathBoldDigamma =
+mathBoldDigamma = map (prefix "b")
   [ "Digamma" --> "\x1d7ca"
   , "digamma" --> "\x1d7cb"
   ]
   
 mathBoldDigit :: [(String, String)]
-mathBoldDigit =
+mathBoldDigit = map (prefix "b")
   [ "0" --> "𝟎"
   , "1" --> "𝟏"
   , "2" --> "𝟐"
@@ -1356,7 +1361,7 @@ mathBoldDigit =
   ]
 
 mathDoubleStruckDigit :: [(String, String)]
-mathDoubleStruckDigit =
+mathDoubleStruckDigit = map (prefix "bb")
   [ "0" --> "𝟘"
   , "1" --> "𝟙"
   , "2" --> "𝟚"
@@ -1370,7 +1375,7 @@ mathDoubleStruckDigit =
   ]
  
 mathSansSerifDigit :: [(String, String)]
-mathSansSerifDigit =
+mathSansSerifDigit = map (prefix "sans")
   [ "0" --> "\x1d7e2"
   , "1" --> "\x1d7e3"
   , "2" --> "\x1d7e4"
@@ -1384,7 +1389,7 @@ mathSansSerifDigit =
   ]
   
 mathSansSerifBoldDigit :: [(String, String)]
-mathSansSerifBoldDigit =
+mathSansSerifBoldDigit = map (prefix "sansb")
   [ "0" --> "\x1d7ec"
   , "1" --> "\x1d7ed"
   , "2" --> "\x1d7ee"
@@ -1398,7 +1403,7 @@ mathSansSerifBoldDigit =
   ]
 
 mathMonospaceDigit :: [(String, String)]
-mathMonospaceDigit =
+mathMonospaceDigit = map (prefix "mono")
   [ "0" --> "\x1d7f6"
   , "1" --> "\x1d7f7"
   , "2" --> "\x1d7f8"

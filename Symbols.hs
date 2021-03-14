@@ -1,4 +1,4 @@
-module LaTeXSymbol where
+module Symbols where
 
 (-->) :: a -> b -> (a,b)
 (-->) = (,)

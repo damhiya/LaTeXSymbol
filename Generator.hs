@@ -1,5 +1,8 @@
 module Generator where
 
+import Control.Monad
+import Data.List
+import System.IO
 import Symbols
 
 symbols = latexUnaryOperator
@@ -37,6 +40,12 @@ symbols = latexUnaryOperator
        <> mathSansSerifBoldDigit
        <> mathMonospaceDigit
 
+
 main :: IO ()
 main = do
-  return ()
+  let jsonPairs = map (\(x,y) -> "[\"" ++ x ++ "\",\"" ++ y ++ "\"]") symbols
+  f <- openFile "symbols.json" WriteMode
+  hPutStr f "[ "
+  hPutStrLn f (intercalate "\n, " jsonPairs)
+  hPutStrLn f "]"
+  hClose f

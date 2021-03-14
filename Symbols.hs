@@ -558,8 +558,8 @@ mathBoldScript = map (prefix "cal")
   , "z" --> "𝔃"
   ]
 
-matheFraktur :: [(String, String)]
-matheFraktur = map (prefix "frak")
+mathFraktur :: [(String, String)]
+mathFraktur = map (prefix "frak")
   [ "A" --> "𝔄"
   , "B" --> "𝔅"
   , "C" --> "ℭ"

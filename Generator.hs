@@ -6,7 +6,7 @@ import Data.Map
 import System.IO
 import Symbols
 
-symbols :: [(Keyword, Font, Symbol)]
+symbols :: [(Keyword, [Style], Symbol)]
 symbols = latexUnaryOperator
        <> latexRelation
        <> latexArrow
@@ -44,25 +44,37 @@ symbols = latexUnaryOperator
        <> mathSansSerifBoldDigit
        <> mathMonospaceDigit
 
-symbolMap :: Map Keyword [(Font, Symbol)]
-symbolMap = unionsWith (++) [singleton k [(f,s)] | (k,f,s) <- symbols]
+symbolMap :: Map Keyword [([Style], Symbol)]
+symbolMap = unionsWith (++) [singleton k [(fs,s)] | (k,fs,s) <- symbols]
 
-makeKeyValue :: String -> String -> String
-makeKeyValue k v = "\"" ++ k  ++ "\":\"" ++ v ++ "\""
+makeString :: String -> String
+makeString s = "\"" ++ s ++ "\""
 
-makeObject :: Keyword -> [(Font, Symbol)] -> String
-makeObject k xs = "{" ++ intercalate "," elems ++ "}"
+makePair :: String -> String -> String
+makePair k v = makeString k ++ ":" ++ v
+
+makeArray :: [String] -> String
+makeArray xs = "[" ++ intercalate "," xs ++ "]"
+
+makeObject :: [String] -> String
+makeObject xs = "{" ++ intercalate "," xs ++ "}"
+
+makeElement :: Keyword -> [([Style], Symbol)] -> String
+makeElement k xs = makeObject [makePair "keyword" (makeString k), makePair "symbols" symbols]
   where
-    elems = makeKeyValue "keyword" k
-          : [makeKeyValue ("symbol-" ++ f) s | (f,s) <- xs]
+    symbols = makeArray [
+                makeObject [  makePair "style" (makeArray (makeString <$> fs))
+                           , makePair "symbol" (makeString s)
+                           ]
+            | (fs, s) <- xs]
 
-symbolObjects :: [String]
-symbolObjects = foldlWithKey' (\rs k xs -> makeObject k xs : rs) [] symbolMap 
+table :: String
+table = "[ " ++ intercalate "\n, " styles ++ "\n]"
+  where
+    styles = foldlWithKey' (\rs k xs -> makeElement k xs : rs) [] symbolMap 
 
 main :: IO ()
 main = do
   f <- openFile "symbol_map.json" WriteMode
-  hPutStr f "[ "
-  hPutStrLn f (intercalate "\n, " symbolObjects)
-  hPutStrLn f "]"
+  hPutStrLn f table
   hClose f

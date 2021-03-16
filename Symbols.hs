@@ -4,10 +4,10 @@ import Data.Bifunctor
 import Data.List
 
 type Keyword  = String
-type Font     = String
+type Style    = String
 type Symbol   = String
+type Element  = (Keyword, [Style], Symbol)
 
-none = "none"
 it = "it"
 bf = "bf"
 sf = "sf"
@@ -17,22 +17,20 @@ scr = "scr"
 cal = "cal"
 frak = "frak"
 
-font :: [Font] -> ([Font -> (Keyword, Font, Symbol)]) -> [(Keyword, Font, Symbol)]
-font fs = map ($f)
-  where
-    f = concat (sort fs)
+font :: [Style] -> [[Style] -> Element] -> [Element]
+font fs = map ($fs)
 
-(-->) :: Keyword -> Symbol -> Font -> (Keyword,Font,Symbol)
+(-->) :: Keyword -> Symbol -> [Style] -> Element
 (-->) = \x y z -> (x,z,y)
 
 -- | LaTeX-Compatible Symbols
-latexUnaryOperator :: [(Keyword, Font, Symbol)]
-latexUnaryOperator = font [none]
+latexUnaryOperator :: [Element]
+latexUnaryOperator = font []
   [ "neg" --> "¬"
   ]
 
-latexRelation :: [(Keyword, Font, Symbol)]
-latexRelation = font [none]
+latexRelation :: [Element]
+latexRelation = font []
   [ "leq" --> "≤"
   , "leqq" --> "≦"
   , "leqslant" --> "⩽"
@@ -114,8 +112,8 @@ latexRelation = font [none]
   , "nsim" --> "≁"
   ]
 
-latexArrow :: [(Keyword, Font, Symbol)]
-latexArrow = font [none]
+latexArrow :: [Element] 
+latexArrow = font []
   [ "to" --> "→"
   , "rightarrow" --> "→"
   , "Rightarrow" --> "⇒"
@@ -138,8 +136,8 @@ latexArrow = font [none]
   , "Updownarrow" --> "⇕"
   ]
 
-latexMisc :: [(Keyword, Font, Symbol)]
-latexMisc = font [none]
+latexMisc :: [Element]
+latexMisc = font []
   [ "partial" --> "∂"
   , "nabla" --> "∇"
   , "imath" --> "ı"
@@ -153,15 +151,15 @@ latexMisc = font [none]
   , "hslash" --> "ℏ"
   ]
 
-latexHebrew :: [(Keyword, Font, Symbol)]
-latexHebrew = font [none]
+latexHebrew :: [Element]
+latexHebrew = font []
   [ "aleph" --> "ℵ"
   , "beth" --> "ℶ"
   , "gimel" --> "ℷ"
   ]
 
-latexParenthesis :: [(Keyword, Font, Symbol)]
-latexParenthesis = font [none]
+latexParenthesis :: [Element]
+latexParenthesis = font []
   [ "langle" --> "⟨"
   , "rangle" --> "⟩"
   , "lfloor" --> "⌊"
@@ -173,8 +171,8 @@ latexParenthesis = font [none]
   ]
 
 -- | Non-LaTeX Symbols
-superscripts :: [(Keyword, Font, Symbol)]
-superscripts = font [none]
+superscripts ::[Element] 
+superscripts = font []
   [ "^0" --> "⁰"
   , "^1" --> "¹"
   , "^2" --> "²"
@@ -257,8 +255,8 @@ superscripts = font [none]
   , "^chi"     --> "ᵡ"
   ]
 
-subscripts :: [(Keyword, Font, Symbol)]
-subscripts = font [none]
+subscripts :: [Element]
+subscripts = font []
   [ "_0" --> "₀"
   , "_1" --> "₁"
   , "_2" --> "₂"
@@ -312,8 +310,8 @@ subscripts = font [none]
   , "_chi"   --> "ᵪ"
   ]
 
-parenthesis :: [(Keyword, Font, Symbol)]
-parenthesis = font [none]
+parenthesis ::[Element] 
+parenthesis = font []
   [ "[[" --> "⟦"
   , "]]" --> "⟧"
   , "<"  --> "⟨"
@@ -333,8 +331,8 @@ parenthesis = font [none]
   , "rbag" --> "⟆"
   ]
 
-greek :: [(Keyword, Font, Symbol)]
-greek = font [none]
+greek ::[Element] 
+greek = font []
   [ "Alpha"      --> "\x0391"
   , "Beta"       --> "\x0392"
   , "Gammma"     --> "\x0393"
@@ -427,7 +425,7 @@ greek = font [none]
 -- sans-serif bold digit
 -- monospace digit
 
-mathBold :: [(Keyword, Font, Symbol)]
+mathBold ::[Element] 
 mathBold = font [bf]
   [ "A" --> "\x1d400" -- 𝐀
   , "B" --> "\x1d401"
@@ -484,7 +482,7 @@ mathBold = font [bf]
   , "z" --> "\x1d433"
   ]
 
-mathItalic :: [(Keyword, Font, Symbol)]
+mathItalic ::[Element] 
 mathItalic = font [it]
   [ "A" --> "\x1d434" -- 𝐴
   , "B" --> "\x1d435" -- 𝐵
@@ -542,7 +540,7 @@ mathItalic = font [it]
   , "z" --> "\x1d467" -- 𝑧
   ]
 
-mathBoldItalic :: [(Keyword, Font, Symbol)]
+mathBoldItalic ::[Element] 
 mathBoldItalic = font [bf, it]
   [ "A" --> "𝑨"
   , "B" --> "𝑩"
@@ -599,7 +597,7 @@ mathBoldItalic = font [bf, it]
   , "z" --> "𝒛"
   ]
 
-mathScript :: [(Keyword, Font, Symbol)]
+mathScript ::[Element] 
 mathScript = font [scr]
   [ "A" --> "𝒜"
   , "B" --> "ℬ"
@@ -656,7 +654,7 @@ mathScript = font [scr]
   , "z" --> "𝓏"
   ]
 
-mathBoldScript :: [(Keyword, Font, Symbol)]
+mathBoldScript ::[Element] 
 mathBoldScript = font [cal]
   [ "A" --> "𝓐"
   , "B" --> "𝓑"
@@ -713,7 +711,7 @@ mathBoldScript = font [cal]
   , "z" --> "𝔃"
   ]
 
-mathFraktur :: [(Keyword, Font, Symbol)]
+mathFraktur ::[Element] 
 mathFraktur = font [frak]
   [ "A" --> "𝔄"
   , "B" --> "𝔅"
@@ -770,7 +768,7 @@ mathFraktur = font [frak]
   , "z" --> "𝔷"
   ]
 
-mathDoubleStruck :: [(Keyword, Font, Symbol)]
+mathDoubleStruck ::[Element] 
 mathDoubleStruck = font [bb]
   [ "A" --> "𝔸"
   , "B" --> "𝔹"
@@ -827,7 +825,7 @@ mathDoubleStruck = font [bb]
   , "z" --> "𝕫"
   ]
 
-mathBoldFraktur :: [(Keyword, Font, Symbol)]
+mathBoldFraktur ::[Element] 
 mathBoldFraktur = font [bf, frak]
   [ "A" --> "\x1d56c"
   , "B" --> "\x1d56d"
@@ -884,7 +882,7 @@ mathBoldFraktur = font [bf, frak]
   , "z" --> "\x1d59f"
   ]
   
-mathSansSerif :: [(Keyword, Font, Symbol)]
+mathSansSerif ::[Element] 
 mathSansSerif = font [sf]
   [ "A" --> "\x1d5a0"
   , "B" --> "\x1d5a1"
@@ -941,7 +939,7 @@ mathSansSerif = font [sf]
   , "z" --> "\x1d5d3"
   ]
   
-mathSansSerifBold :: [(Keyword, Font, Symbol)]
+mathSansSerifBold ::[Element] 
 mathSansSerifBold = font [sf, bf]
   [ "A" --> "\x1d5d4"
   , "B" --> "\x1d5d5"
@@ -998,7 +996,7 @@ mathSansSerifBold = font [sf, bf]
   , "z" --> "\x1d607"
   ]
 
-mathSansSerifItalic :: [(Keyword, Font, Symbol)]
+mathSansSerifItalic ::[Element] 
 mathSansSerifItalic = font [sf, it]
   [ "A" --> "\x1d608"
   , "B" --> "\x1d609"
@@ -1055,7 +1053,7 @@ mathSansSerifItalic = font [sf, it]
   , "z" --> "\x1d63b"
   ]
 
-mathSansSerifBoldItalic :: [(Keyword, Font, Symbol)]
+mathSansSerifBoldItalic ::[Element] 
 mathSansSerifBoldItalic = font [sf, bf, it]
   [ "A" --> "\x1d63c"
   , "B" --> "\x1d63d"
@@ -1112,7 +1110,7 @@ mathSansSerifBoldItalic = font [sf, bf, it]
   , "z" --> "\x1d66f"
   ]
   
-mathMonospace :: [(Keyword, Font, Symbol)]
+mathMonospace ::[Element] 
 mathMonospace = font [tt]
   [ "A" --> "\x1d670"
   , "B" --> "\x1d671"
@@ -1169,13 +1167,13 @@ mathMonospace = font [tt]
   , "z" --> "\x1d6a3"
   ]
 
-mathItalicDotless :: [(Keyword, Font, Symbol)]
+mathItalicDotless ::[Element] 
 mathItalicDotless = font [it]
   [ "imath" --> "\x1d6a4" -- "𝚤"
   , "jmath" --> "\x1d6a5" -- "𝚥"
   ]
 
-mathBoldGreek :: [(Keyword, Font, Symbol)]
+mathBoldGreek :: [Element] 
 mathBoldGreek = font [bf]
   [ "Alpha"      --> "\x1d6a8"
   , "Beta"       --> "\x1d6a9"
@@ -1239,7 +1237,7 @@ mathBoldGreek = font [bf]
   , "varpi"      --> "\x1d6e1"
   ]
   
-mathItalicGreek :: [(Keyword, Font, Symbol)]
+mathItalicGreek :: [Element] 
 mathItalicGreek = font [it]
   [ "Alpha"      --> "\x1d6e2"
   , "Beta"       --> "\x1d6e3"
@@ -1303,7 +1301,7 @@ mathItalicGreek = font [it]
   , "varpi"      --> "\x1d71b"
   ]
   
-mathBoldItalicGreek :: [(Keyword, Font, Symbol)]
+mathBoldItalicGreek :: [Element]
 mathBoldItalicGreek = font [bf, it]
   [ "Alpha"      --> "\x1d71c"
   , "Beta"       --> "\x1d71d"
@@ -1367,7 +1365,7 @@ mathBoldItalicGreek = font [bf, it]
   , "varpi"      --> "\x1d755"
   ]
   
-mathSansSerifBoldGreek :: [(Keyword, Font, Symbol)]
+mathSansSerifBoldGreek :: [Element]
 mathSansSerifBoldGreek = font [sf, bf]
   [ "Alpha"      --> "\x1d756"
   , "Beta"       --> "\x1d757"
@@ -1431,7 +1429,7 @@ mathSansSerifBoldGreek = font [sf, bf]
   , "varpi"      --> "\x1d78f"
   ]
 
-mathSansSerifBoldItalicGreek :: [(Keyword, Font, Symbol)]
+mathSansSerifBoldItalicGreek :: [Element]
 mathSansSerifBoldItalicGreek = font [sf, bf, it]
   [ "Alpha"      --> "\x1d790"
   , "Beta"       --> "\x1d791"
@@ -1495,13 +1493,13 @@ mathSansSerifBoldItalicGreek = font [sf, bf, it]
   , "varpi"      --> "\x1d7c9"
   ]
 
-mathBoldDigamma :: [(Keyword, Font, Symbol)]
+mathBoldDigamma :: [Element]
 mathBoldDigamma = font [bf]
   [ "Digamma" --> "\x1d7ca"
   , "digamma" --> "\x1d7cb"
   ]
   
-mathBoldDigit :: [(Keyword, Font, Symbol)]
+mathBoldDigit :: [Element]
 mathBoldDigit = font [bf]
   [ "0" --> "𝟎"
   , "1" --> "𝟏"
@@ -1515,7 +1513,7 @@ mathBoldDigit = font [bf]
   , "9" --> "𝟗"
   ]
 
-mathDoubleStruckDigit :: [(Keyword, Font, Symbol)]
+mathDoubleStruckDigit :: [Element]
 mathDoubleStruckDigit = font [bb]
   [ "0" --> "𝟘"
   , "1" --> "𝟙"
@@ -1529,7 +1527,7 @@ mathDoubleStruckDigit = font [bb]
   , "9" --> "𝟡"
   ]
  
-mathSansSerifDigit :: [(Keyword, Font, Symbol)]
+mathSansSerifDigit :: [Element]
 mathSansSerifDigit = font [sf]
   [ "0" --> "\x1d7e2"
   , "1" --> "\x1d7e3"
@@ -1543,7 +1541,7 @@ mathSansSerifDigit = font [sf]
   , "9" --> "\x1d7eb"
   ]
   
-mathSansSerifBoldDigit :: [(Keyword, Font, Symbol)]
+mathSansSerifBoldDigit :: [Element]
 mathSansSerifBoldDigit = font [sf, bf]
   [ "0" --> "\x1d7ec"
   , "1" --> "\x1d7ed"
@@ -1557,7 +1555,7 @@ mathSansSerifBoldDigit = font [sf, bf]
   , "9" --> "\x1d7f5"
   ]
 
-mathMonospaceDigit :: [(Keyword, Font, Symbol)]
+mathMonospaceDigit :: [Element]
 mathMonospaceDigit = font [tt]
   [ "0" --> "\x1d7f6"
   , "1" --> "\x1d7f7"

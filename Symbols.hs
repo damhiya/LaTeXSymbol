@@ -7,7 +7,7 @@ type Keyword  = String
 type Font     = String
 type Symbol   = String
 
-rm = "rm"
+none = "none"
 it = "it"
 bf = "bf"
 sf = "sf"
@@ -27,12 +27,12 @@ font fs = map ($f)
 
 -- | LaTeX-Compatible Symbols
 latexUnaryOperator :: [(Keyword, Font, Symbol)]
-latexUnaryOperator = font [rm]
+latexUnaryOperator = font [none]
   [ "neg" --> "¬"
   ]
 
 latexRelation :: [(Keyword, Font, Symbol)]
-latexRelation = font [rm]
+latexRelation = font [none]
   [ "leq" --> "≤"
   , "leqq" --> "≦"
   , "leqslant" --> "⩽"
@@ -115,7 +115,7 @@ latexRelation = font [rm]
   ]
 
 latexArrow :: [(Keyword, Font, Symbol)]
-latexArrow = font [rm]
+latexArrow = font [none]
   [ "to" --> "→"
   , "rightarrow" --> "→"
   , "Rightarrow" --> "⇒"
@@ -139,7 +139,7 @@ latexArrow = font [rm]
   ]
 
 latexMisc :: [(Keyword, Font, Symbol)]
-latexMisc = font [rm]
+latexMisc = font [none]
   [ "partial" --> "∂"
   , "nabla" --> "∇"
   , "imath" --> "ı"
@@ -154,14 +154,14 @@ latexMisc = font [rm]
   ]
 
 latexHebrew :: [(Keyword, Font, Symbol)]
-latexHebrew = font [rm]
+latexHebrew = font [none]
   [ "aleph" --> "ℵ"
   , "beth" --> "ℶ"
   , "gimel" --> "ℷ"
   ]
 
 latexParenthesis :: [(Keyword, Font, Symbol)]
-latexParenthesis = font [rm]
+latexParenthesis = font [none]
   [ "langle" --> "⟨"
   , "rangle" --> "⟩"
   , "lfloor" --> "⌊"
@@ -174,7 +174,7 @@ latexParenthesis = font [rm]
 
 -- | Non-LaTeX Symbols
 superscripts :: [(Keyword, Font, Symbol)]
-superscripts = font [rm]
+superscripts = font [none]
   [ "^0" --> "⁰"
   , "^1" --> "¹"
   , "^2" --> "²"
@@ -258,7 +258,7 @@ superscripts = font [rm]
   ]
 
 subscripts :: [(Keyword, Font, Symbol)]
-subscripts = font [rm]
+subscripts = font [none]
   [ "_0" --> "₀"
   , "_1" --> "₁"
   , "_2" --> "₂"
@@ -313,7 +313,7 @@ subscripts = font [rm]
   ]
 
 parenthesis :: [(Keyword, Font, Symbol)]
-parenthesis = font [rm]
+parenthesis = font [none]
   [ "[[" --> "⟦"
   , "]]" --> "⟧"
   , "<"  --> "⟨"
@@ -334,7 +334,7 @@ parenthesis = font [rm]
   ]
 
 greek :: [(Keyword, Font, Symbol)]
-greek = font [rm]
+greek = font [none]
   [ "Alpha"      --> "\x0391"
   , "Beta"       --> "\x0392"
   , "Gammma"     --> "\x0393"

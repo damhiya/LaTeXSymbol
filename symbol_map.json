@@ -87,7 +87,7 @@
 , {"keyword":"n","symbol-bf":"𝐧","symbol-it":"𝑛","symbol-bfit":"𝒏","symbol-scr":"𝓃","symbol-cal":"𝓷","symbol-frak":"𝔫","symbol-bb":"𝕟","symbol-bffrak":"𝖓","symbol-sf":"𝗇","symbol-bfsf":"𝗻","symbol-itsf":"𝘯","symbol-bfitsf":"𝙣","symbol-tt":"𝚗"}
 , {"keyword":"mu","symbol-rm":"μ","symbol-bf":"𝛍","symbol-it":"𝜇","symbol-bfit":"𝝁","symbol-bfsf":"𝝻","symbol-bfitsf":"𝞵"}
 , {"keyword":"mapsto","symbol-rm":"↦"}
-, {"keyword":"m","symbol-bf":"𝐦","symbol-it":"𝑚","symbol-bfit":"𝒎","symbol-scr":"𝓂","symbol-cal":"𝓶","symbol-frak":"𝔪","symbol-bb":"𝕞","symbol-bffrak":"𝖒","symbol-sf":"𝗆","symbol-bfsf":"𝛺","symbol-itsf":"𝘮","symbol-bfitsf":"𝙢","symbol-tt":"𝚖"}
+, {"keyword":"m","symbol-bf":"𝐦","symbol-it":"𝑚","symbol-bfit":"𝒎","symbol-scr":"𝓂","symbol-cal":"𝓶","symbol-frak":"𝔪","symbol-bb":"𝕞","symbol-bffrak":"𝖒","symbol-sf":"𝗆","symbol-bfsf":"𝗺","symbol-itsf":"𝘮","symbol-bfitsf":"𝙢","symbol-tt":"𝚖"}
 , {"keyword":"longrightarrow","symbol-rm":"⟶"}
 , {"keyword":"longmapsto","symbol-rm":"⟼"}
 , {"keyword":"longleftarrow","symbol-rm":"⟵"}
@@ -121,7 +121,7 @@
 , {"keyword":"i","symbol-bf":"𝐢","symbol-it":"𝑖","symbol-bfit":"𝒊","symbol-scr":"𝒾","symbol-cal":"𝓲","symbol-frak":"𝔦","symbol-bb":"𝕚","symbol-bffrak":"𝖎","symbol-sf":"𝗂","symbol-bfsf":"𝗶","symbol-itsf":"𝘪","symbol-bfitsf":"𝙞","symbol-tt":"𝚒"}
 , {"keyword":"hslash","symbol-rm":"ℏ"}
 , {"keyword":"hbar","symbol-rm":"ℏ"}
-, {"keyword":"h","symbol-bf":"𝐡","symbol-it":"𝑕","symbol-bfit":"𝒉","symbol-scr":"𝒽","symbol-cal":"𝓱","symbol-frak":"𝔥","symbol-bb":"𝕙","symbol-bffrak":"𝖍","symbol-sf":"𝗁","symbol-bfsf":"𝗵","symbol-itsf":"𝘩","symbol-bfitsf":"𝙝","symbol-tt":"𝚑"}
+, {"keyword":"h","symbol-bf":"𝐡","symbol-bfit":"𝒉","symbol-scr":"𝒽","symbol-cal":"𝓱","symbol-frak":"𝔥","symbol-bb":"𝕙","symbol-bffrak":"𝖍","symbol-sf":"𝗁","symbol-bfsf":"𝗵","symbol-itsf":"𝘩","symbol-bfitsf":"𝙝","symbol-tt":"𝚑"}
 , {"keyword":"gtrsim","symbol-rm":"≳"}
 , {"keyword":"gtrapprox","symbol-rm":"⪆"}
 , {"keyword":"gnsim","symbol-rm":"⋧"}

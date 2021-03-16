@@ -520,7 +520,8 @@ mathItalic = font [it]
   , "e" --> "\x1d452" -- 𝑒
   , "f" --> "\x1d453" -- 𝑓
   , "g" --> "\x1d454" -- 𝑔
-  , "h" --> "\x1d455" -- ℎ
+  -- , "h" --> "\x1d455" -- ℎ
+  -- there is no "Mathematical Italic Small H"
   , "i" --> "\x1d456" -- 𝑖
   , "j" --> "\x1d457" -- 𝑗
   , "k" --> "\x1d458" -- 𝑘
@@ -981,7 +982,7 @@ mathSansSerifBold = font [sf, bf]
   , "j" --> "\x1d5f7"
   , "k" --> "\x1d5f8"
   , "l" --> "\x1d5f9"
-  , "m" --> "\x1d6fa"
+  , "m" --> "\x1d5fa"
   , "n" --> "\x1d5fb"
   , "o" --> "\x1d5fc"
   , "p" --> "\x1d5fd"

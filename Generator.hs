@@ -12,6 +12,8 @@ symbols = latexUnaryOperator
        <> latexHebrew
        <> latexParenthesis
 
+       <> superscripts
+       <> subscripts
        <> parenthesis
        <> greek
        <> mathBold

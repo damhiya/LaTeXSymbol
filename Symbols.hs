@@ -1,21 +1,38 @@
 module Symbols where
 
 import Data.Bifunctor
+import Data.List
 
-(-->) :: a -> b -> (a,b)
-(-->) = (,)
+type Keyword  = String
+type Font     = String
+type Symbol   = String
 
-prefix :: String -> (String, String) -> (String, String)
-prefix p = first (p++)
+rm = "rm"
+it = "it"
+bf = "bf"
+sf = "sf"
+tt = "tt"
+bb = "bb"
+scr = "scr"
+cal = "cal"
+frak = "frak"
+
+font :: [Font] -> ([Font -> (Keyword, Font, Symbol)]) -> [(Keyword, Font, Symbol)]
+font fs = map ($f)
+  where
+    f = concat (sort fs)
+
+(-->) :: Keyword -> Symbol -> Font -> (Keyword,Font,Symbol)
+(-->) = \x y z -> (x,z,y)
 
 -- | LaTeX-Compatible Symbols
-latexUnaryOperator :: [(String, String)]
-latexUnaryOperator =
+latexUnaryOperator :: [(Keyword, Font, Symbol)]
+latexUnaryOperator = font [rm]
   [ "neg" --> "¬"
   ]
 
-latexRelation :: [(String, String)]
-latexRelation =
+latexRelation :: [(Keyword, Font, Symbol)]
+latexRelation = font [rm]
   [ "leq" --> "≤"
   , "leqq" --> "≦"
   , "leqslant" --> "⩽"
@@ -97,8 +114,8 @@ latexRelation =
   , "nsim" --> "≁"
   ]
 
-latexArrow :: [(String, String)]
-latexArrow =
+latexArrow :: [(Keyword, Font, Symbol)]
+latexArrow = font [rm]
   [ "to" --> "→"
   , "rightarrow" --> "→"
   , "Rightarrow" --> "⇒"
@@ -121,8 +138,8 @@ latexArrow =
   , "Updownarrow" --> "⇕"
   ]
 
-latexMisc :: [(String, String)]
-latexMisc =
+latexMisc :: [(Keyword, Font, Symbol)]
+latexMisc = font [rm]
   [ "partial" --> "∂"
   , "nabla" --> "∇"
   , "imath" --> "ı"
@@ -136,15 +153,15 @@ latexMisc =
   , "hslash" --> "ℏ"
   ]
 
-latexHebrew :: [(String, String)]
-latexHebrew =
+latexHebrew :: [(Keyword, Font, Symbol)]
+latexHebrew = font [rm]
   [ "aleph" --> "ℵ"
   , "beth" --> "ℶ"
   , "gimel" --> "ℷ"
   ]
 
-latexParenthesis :: [(String, String)]
-latexParenthesis =
+latexParenthesis :: [(Keyword, Font, Symbol)]
+latexParenthesis = font [rm]
   [ "langle" --> "⟨"
   , "rangle" --> "⟩"
   , "lfloor" --> "⌊"
@@ -156,147 +173,147 @@ latexParenthesis =
   ]
 
 -- | Non-LaTeX Symbols
-superscripts :: [(String, String)]
-superscripts = map (prefix "^")
-  [ "0" --> "⁰"
-  , "1" --> "¹"
-  , "2" --> "²"
-  , "3" --> "³"
-  , "4" --> "⁴"
-  , "5" --> "⁵"
-  , "6" --> "⁶"
-  , "7" --> "⁷"
-  , "8" --> "⁸"
-  , "9" --> "⁹"
+superscripts :: [(Keyword, Font, Symbol)]
+superscripts = font [rm]
+  [ "^0" --> "⁰"
+  , "^1" --> "¹"
+  , "^2" --> "²"
+  , "^3" --> "³"
+  , "^4" --> "⁴"
+  , "^5" --> "⁵"
+  , "^6" --> "⁶"
+  , "^7" --> "⁷"
+  , "^8" --> "⁸"
+  , "^9" --> "⁹"
 
-  , "+" --> "⁺"
-  , "-" --> "⁻"
-  , "=" --> "⁼"
-  , "(" --> "⁽"
-  , ")" --> "⁾"
+  , "^+" --> "⁺"
+  , "^-" --> "⁻"
+  , "^=" --> "⁼"
+  , "^(" --> "⁽"
+  , "^)" --> "⁾"
 
-  , "A" --> "ᴬ"
-  , "B" --> "ᴮ"
-  -- , "C" --> ""
-  , "D" --> "ᴰ"
-  , "E" --> "ᴱ"
-  -- , "F" --> ""
-  , "G" --> "ᴳ"
-  , "H" --> "ᴴ"
-  , "I" --> "ᴵ"
-  , "J" --> "ᴶ"
-  , "K" --> "ᴷ"
-  , "L" --> "ᴸ"
-  , "M" --> "ᴹ"
-  , "N" --> "ᴺ"
-  , "O" --> "ᴼ"
-  , "P" --> "ᴾ"
-  -- , "Q" --> ""
-  , "R" --> "ᴿ"
-  -- , "S" --> ""
-  , "T" --> "ᵀ"
-  , "U" --> "ᵁ"
-  , "V" --> "ⱽ"
-  , "W" --> "ᵂ"
-  -- , "X" --> ""
-  -- , "Y" --> ""
-  -- , "Z" --> ""
+  , "^A" --> "ᴬ"
+  , "^B" --> "ᴮ"
+  -- , "^C" --> ""
+  , "^D" --> "ᴰ"
+  , "^E" --> "ᴱ"
+  -- , "^F" --> ""
+  , "^G" --> "ᴳ"
+  , "^H" --> "ᴴ"
+  , "^I" --> "ᴵ"
+  , "^J" --> "ᴶ"
+  , "^K" --> "ᴷ"
+  , "^L" --> "ᴸ"
+  , "^M" --> "ᴹ"
+  , "^N" --> "ᴺ"
+  , "^O" --> "ᴼ"
+  , "^P" --> "ᴾ"
+  -- , "^Q" --> ""
+  , "^R" --> "ᴿ"
+  -- , "^S" --> ""
+  , "^T" --> "ᵀ"
+  , "^U" --> "ᵁ"
+  , "^V" --> "ⱽ"
+  , "^W" --> "ᵂ"
+  -- ^, "X" --> ""
+  -- ^, "Y" --> ""
+  -- ^, "Z" --> ""
   
-  , "a" --> "ᵃ"
-  , "b" --> "ᵇ"
-  , "c" --> "ᶜ"
-  , "d" --> "ᵈ"
-  , "e" --> "ᵉ"
-  , "f" --> "ᶠ"
-  , "g" --> "ᵍ"
-  , "h" --> "ʰ"
-  , "i" --> "ⁱ"
-  , "j" --> "ʲ"
-  , "k" --> "ᵏ"
-  , "l" --> "ˡ"
-  , "m" --> "ᵐ"
-  , "n" --> "ⁿ"
-  , "o" --> "ᵒ"
-  , "p" --> "ᵖ"
-  -- , "q" --> ""
-  , "r" --> "ʳ"
-  , "s" --> "ˢ"
-  , "t" --> "ᵗ"
-  , "u" --> "ᵘ"
-  , "v" --> "ᵛ"
-  , "w" --> "ʷ"
-  , "x" --> "ˣ"
-  , "y" --> "ʸ"
-  , "z" --> "ᶻ"
+  , "^a" --> "ᵃ"
+  , "^b" --> "ᵇ"
+  , "^c" --> "ᶜ"
+  , "^d" --> "ᵈ"
+  , "^e" --> "ᵉ"
+  , "^f" --> "ᶠ"
+  , "^g" --> "ᵍ"
+  , "^h" --> "ʰ"
+  , "^i" --> "ⁱ"
+  , "^j" --> "ʲ"
+  , "^k" --> "ᵏ"
+  , "^l" --> "ˡ"
+  , "^m" --> "ᵐ"
+  , "^n" --> "ⁿ"
+  , "^o" --> "ᵒ"
+  , "^p" --> "ᵖ"
+  -- , "^q" --> ""
+  , "^r" --> "ʳ"
+  , "^s" --> "ˢ"
+  , "^t" --> "ᵗ"
+  , "^u" --> "ᵘ"
+  , "^v" --> "ᵛ"
+  , "^w" --> "ʷ"
+  , "^x" --> "ˣ"
+  , "^y" --> "ʸ"
+  , "^z" --> "ᶻ"
   
-  , "beta"    --> "ᵝ"
-  , "gamma"   --> "ᵞ"
-  , "delta"   --> "ᵟ"
-  , "epsilon" --> "ᵋ"
-  , "theta"   --> "ᶿ"
-  , "iota"    --> "ᶥ"
-  , "upsilon" --> "ᶹ"
-  , "phi"     --> "ᵠ"
-  , "chi"     --> "ᵡ"
+  , "^beta"    --> "ᵝ"
+  , "^gamma"   --> "ᵞ"
+  , "^delta"   --> "ᵟ"
+  , "^epsilon" --> "ᵋ"
+  , "^theta"   --> "ᶿ"
+  , "^iota"    --> "ᶥ"
+  , "^upsilon" --> "ᶹ"
+  , "^phi"     --> "ᵠ"
+  , "^chi"     --> "ᵡ"
   ]
 
-subscripts :: [(String, String)]
-subscripts = map (prefix "_")
-  [ "0" --> "₀"
-  , "1" --> "₁"
-  , "2" --> "₂"
-  , "3" --> "₃"
-  , "4" --> "₄"
-  , "5" --> "₅"
-  , "6" --> "₆"
-  , "7" --> "₇"
-  , "8" --> "₈"
-  , "9" --> "₉"
+subscripts :: [(Keyword, Font, Symbol)]
+subscripts = font [rm]
+  [ "_0" --> "₀"
+  , "_1" --> "₁"
+  , "_2" --> "₂"
+  , "_3" --> "₃"
+  , "_4" --> "₄"
+  , "_5" --> "₅"
+  , "_6" --> "₆"
+  , "_7" --> "₇"
+  , "_8" --> "₈"
+  , "_9" --> "₉"
 
-  , "+" --> "₊"
-  , "-" --> "₋"
-  , "=" --> "₌"
-  , "(" --> "₍"
-  , ")" --> "₎"
+  , "_+" --> "₊"
+  , "_-" --> "₋"
+  , "_=" --> "₌"
+  , "_(" --> "₍"
+  , "_)" --> "₎"
 
-  , "a" --> "ₐ"
-  -- , "b" --> ""
-  -- , "c" --> ""
-  -- , "d" --> ""
-  , "e" --> "ₑ"
-  -- , "f" --> ""
-  -- , "g" --> ""
-  , "h" --> "ₕ"
-  , "i" --> "ᵢ"
-  , "j" --> "ⱼ"
-  , "k" --> "ₖ"
-  , "l" --> "ₗ"
-  , "m" --> "ₘ"
-  , "n" --> "ₙ"
-  , "o" --> "ₒ"
-  , "p" --> "ₚ"
-  , "q" --> " "
-  , "r" --> "ᵣ"
-  , "s" --> "ₛ"
-  , "t" --> "ₜ"
-  , "u" --> "ᵤ"
-  , "v" --> "ᵥ"
-  -- , "w" --> ""
-  , "x" --> "ₓ"
-  -- , "y" --> ""
-  -- , "z" --> ""
+  , "_a" --> "ₐ"
+  -- , "_b" --> ""
+  -- , "_c" --> ""
+  -- , "_d" --> ""
+  , "_e" --> "ₑ"
+  -- , "_f" --> ""
+  -- , "_g" --> ""
+  , "_h" --> "ₕ"
+  , "_i" --> "ᵢ"
+  , "_j" --> "ⱼ"
+  , "_k" --> "ₖ"
+  , "_l" --> "ₗ"
+  , "_m" --> "ₘ"
+  , "_n" --> "ₙ"
+  , "_o" --> "ₒ"
+  , "_p" --> "ₚ"
+  , "_q" --> " "
+  , "_r" --> "ᵣ"
+  , "_s" --> "ₛ"
+  , "_t" --> "ₜ"
+  , "_u" --> "ᵤ"
+  , "_v" --> "ᵥ"
+  -- , "_w" --> ""
+  , "_x" --> "ₓ"
+  -- , "_y" --> ""
+  -- , "_z" --> ""
 
-  , "schwa" --> "ₔ"
+  , "_schwa" --> "ₔ"
 
-  , "beta"  --> "ᵦ"
-  , "gamma" --> "ᵧ"
-  , "rho"   --> "ᵨ"
-  , "phi"   --> "ᵩ"
-  , "chi"   --> "ᵪ"
+  , "_beta"  --> "ᵦ"
+  , "_gamma" --> "ᵧ"
+  , "_rho"   --> "ᵨ"
+  , "_phi"   --> "ᵩ"
+  , "_chi"   --> "ᵪ"
   ]
 
-parenthesis :: [(String, String)]
-parenthesis =
+parenthesis :: [(Keyword, Font, Symbol)]
+parenthesis = font [rm]
   [ "[[" --> "⟦"
   , "]]" --> "⟧"
   , "<"  --> "⟨"
@@ -316,8 +333,8 @@ parenthesis =
   , "rbag" --> "⟆"
   ]
 
-greek :: [(String, String)]
-greek =
+greek :: [(Keyword, Font, Symbol)]
+greek = font [rm]
   [ "Alpha"      --> "\x0391"
   , "Beta"       --> "\x0392"
   , "Gammma"     --> "\x0393"
@@ -335,13 +352,13 @@ greek =
   , "Omicron"    --> "\x039f"
   , "Pi"         --> "\x03a0"
   , "Rho"        --> "\x03a1"
-  , "Sigma"      --> "\x03a2"
-  , "Tau"        --> "\x03a3"
-  , "Upsilon"    --> "\x03a4"
-  , "Phi"        --> "\x03a5"
-  , "Chi"        --> "\x03a6"
-  , "Psi"        --> "\x03a7"
-  , "Omega"      --> "\x03a8"
+  , "Sigma"      --> "\x03a3"
+  , "Tau"        --> "\x03a4"
+  , "Upsilon"    --> "\x03a5"
+  , "Phi"        --> "\x03a6"
+  , "Chi"        --> "\x03a7"
+  , "Psi"        --> "\x03a8"
+  , "Omega"      --> "\x03a9"
 
   , "alpha"      --> "\x03b1"
   , "beta"       --> "\x03b2"
@@ -410,8 +427,8 @@ greek =
 -- sans-serif bold digit
 -- monospace digit
 
-mathBold :: [(String, String)]
-mathBold = map (prefix "bf")
+mathBold :: [(Keyword, Font, Symbol)]
+mathBold = font [bf]
   [ "A" --> "\x1d400" -- 𝐀
   , "B" --> "\x1d401"
   , "C" --> "\x1d402"
@@ -467,8 +484,8 @@ mathBold = map (prefix "bf")
   , "z" --> "\x1d433"
   ]
 
-mathItalic :: [(String, String)]
-mathItalic = map (prefix "it")
+mathItalic :: [(Keyword, Font, Symbol)]
+mathItalic = font [it]
   [ "A" --> "\x1d434" -- 𝐴
   , "B" --> "\x1d435" -- 𝐵
   , "C" --> "\x1d436" -- 𝐶
@@ -524,8 +541,8 @@ mathItalic = map (prefix "it")
   , "z" --> "\x1d467" -- 𝑧
   ]
 
-mathBoldItalic :: [(String, String)]
-mathBoldItalic = map (prefix "bfit")
+mathBoldItalic :: [(Keyword, Font, Symbol)]
+mathBoldItalic = font [bf, it]
   [ "A" --> "𝑨"
   , "B" --> "𝑩"
   , "C" --> "𝑪"
@@ -581,8 +598,8 @@ mathBoldItalic = map (prefix "bfit")
   , "z" --> "𝒛"
   ]
 
-mathScript :: [(String, String)]
-mathScript = map (prefix "scr")
+mathScript :: [(Keyword, Font, Symbol)]
+mathScript = font [scr]
   [ "A" --> "𝒜"
   , "B" --> "ℬ"
   , "C" --> "𝒞"
@@ -638,8 +655,8 @@ mathScript = map (prefix "scr")
   , "z" --> "𝓏"
   ]
 
-mathBoldScript :: [(String, String)]
-mathBoldScript = map (prefix "cal")
+mathBoldScript :: [(Keyword, Font, Symbol)]
+mathBoldScript = font [cal]
   [ "A" --> "𝓐"
   , "B" --> "𝓑"
   , "C" --> "𝓒"
@@ -695,8 +712,8 @@ mathBoldScript = map (prefix "cal")
   , "z" --> "𝔃"
   ]
 
-mathFraktur :: [(String, String)]
-mathFraktur = map (prefix "frak")
+mathFraktur :: [(Keyword, Font, Symbol)]
+mathFraktur = font [frak]
   [ "A" --> "𝔄"
   , "B" --> "𝔅"
   , "C" --> "ℭ"
@@ -752,8 +769,8 @@ mathFraktur = map (prefix "frak")
   , "z" --> "𝔷"
   ]
 
-mathDoubleStruck :: [(String, String)]
-mathDoubleStruck = map (prefix "bb")
+mathDoubleStruck :: [(Keyword, Font, Symbol)]
+mathDoubleStruck = font [bb]
   [ "A" --> "𝔸"
   , "B" --> "𝔹"
   , "C" --> "ℂ"
@@ -809,8 +826,8 @@ mathDoubleStruck = map (prefix "bb")
   , "z" --> "𝕫"
   ]
 
-mathBoldFraktur :: [(String, String)]
-mathBoldFraktur = map (prefix "bffrak")
+mathBoldFraktur :: [(Keyword, Font, Symbol)]
+mathBoldFraktur = font [bf, frak]
   [ "A" --> "\x1d56c"
   , "B" --> "\x1d56d"
   , "C" --> "\x1d56e"
@@ -866,8 +883,8 @@ mathBoldFraktur = map (prefix "bffrak")
   , "z" --> "\x1d59f"
   ]
   
-mathSansSerif :: [(String, String)]
-mathSansSerif = map (prefix "sans")
+mathSansSerif :: [(Keyword, Font, Symbol)]
+mathSansSerif = font [sf]
   [ "A" --> "\x1d5a0"
   , "B" --> "\x1d5a1"
   , "C" --> "\x1d5a2"
@@ -923,8 +940,8 @@ mathSansSerif = map (prefix "sans")
   , "z" --> "\x1d5d3"
   ]
   
-mathSansSerifBold :: [(String, String)]
-mathSansSerifBold = map (prefix "sansbf")
+mathSansSerifBold :: [(Keyword, Font, Symbol)]
+mathSansSerifBold = font [sf, bf]
   [ "A" --> "\x1d5d4"
   , "B" --> "\x1d5d5"
   , "C" --> "\x1d5d6"
@@ -980,8 +997,8 @@ mathSansSerifBold = map (prefix "sansbf")
   , "z" --> "\x1d607"
   ]
 
-mathSansSerifItalic :: [(String, String)]
-mathSansSerifItalic = map (prefix "sansit")
+mathSansSerifItalic :: [(Keyword, Font, Symbol)]
+mathSansSerifItalic = font [sf, it]
   [ "A" --> "\x1d608"
   , "B" --> "\x1d609"
   , "C" --> "\x1d60a"
@@ -1037,8 +1054,8 @@ mathSansSerifItalic = map (prefix "sansit")
   , "z" --> "\x1d63b"
   ]
 
-mathSansSerifBoldItalic :: [(String, String)]
-mathSansSerifBoldItalic = map (prefix "sansbfit")
+mathSansSerifBoldItalic :: [(Keyword, Font, Symbol)]
+mathSansSerifBoldItalic = font [sf, bf, it]
   [ "A" --> "\x1d63c"
   , "B" --> "\x1d63d"
   , "C" --> "\x1d63e"
@@ -1094,8 +1111,8 @@ mathSansSerifBoldItalic = map (prefix "sansbfit")
   , "z" --> "\x1d66f"
   ]
   
-mathMonospace :: [(String, String)]
-mathMonospace = map (prefix "mono")
+mathMonospace :: [(Keyword, Font, Symbol)]
+mathMonospace = font [tt]
   [ "A" --> "\x1d670"
   , "B" --> "\x1d671"
   , "C" --> "\x1d672"
@@ -1151,14 +1168,14 @@ mathMonospace = map (prefix "mono")
   , "z" --> "\x1d6a3"
   ]
 
-mathItalicDotless :: [(String, String)]
-mathItalicDotless = map (prefix "it")
+mathItalicDotless :: [(Keyword, Font, Symbol)]
+mathItalicDotless = font [it]
   [ "imath" --> "\x1d6a4" -- "𝚤"
   , "jmath" --> "\x1d6a5" -- "𝚥"
   ]
 
-mathBoldGreek :: [(String, String)]
-mathBoldGreek = map (prefix "bf")
+mathBoldGreek :: [(Keyword, Font, Symbol)]
+mathBoldGreek = font [bf]
   [ "Alpha"      --> "\x1d6a8"
   , "Beta"       --> "\x1d6a9"
   , "Gammma"     --> "\x1d6aa"
@@ -1221,8 +1238,8 @@ mathBoldGreek = map (prefix "bf")
   , "varpi"      --> "\x1d6e1"
   ]
   
-mathItalicGreek :: [(String, String)]
-mathItalicGreek = map (prefix "it")
+mathItalicGreek :: [(Keyword, Font, Symbol)]
+mathItalicGreek = font [it]
   [ "Alpha"      --> "\x1d6e2"
   , "Beta"       --> "\x1d6e3"
   , "Gammma"     --> "\x1d6e4"
@@ -1285,8 +1302,8 @@ mathItalicGreek = map (prefix "it")
   , "varpi"      --> "\x1d71b"
   ]
   
-mathBoldItalicGreek :: [(String, String)]
-mathBoldItalicGreek = map (prefix "bfit")
+mathBoldItalicGreek :: [(Keyword, Font, Symbol)]
+mathBoldItalicGreek = font [bf, it]
   [ "Alpha"      --> "\x1d71c"
   , "Beta"       --> "\x1d71d"
   , "Gammma"     --> "\x1d71e"
@@ -1349,8 +1366,8 @@ mathBoldItalicGreek = map (prefix "bfit")
   , "varpi"      --> "\x1d755"
   ]
   
-mathSansSerifBoldGreek :: [(String, String)]
-mathSansSerifBoldGreek = map (prefix "sansbf")
+mathSansSerifBoldGreek :: [(Keyword, Font, Symbol)]
+mathSansSerifBoldGreek = font [sf, bf]
   [ "Alpha"      --> "\x1d756"
   , "Beta"       --> "\x1d757"
   , "Gammma"     --> "\x1d758"
@@ -1413,8 +1430,8 @@ mathSansSerifBoldGreek = map (prefix "sansbf")
   , "varpi"      --> "\x1d78f"
   ]
 
-mathSansSerifBoldItalicGreek :: [(String, String)]
-mathSansSerifBoldItalicGreek = map (prefix "sansbfit")
+mathSansSerifBoldItalicGreek :: [(Keyword, Font, Symbol)]
+mathSansSerifBoldItalicGreek = font [sf, bf, it]
   [ "Alpha"      --> "\x1d790"
   , "Beta"       --> "\x1d791"
   , "Gammma"     --> "\x1d792"
@@ -1477,14 +1494,14 @@ mathSansSerifBoldItalicGreek = map (prefix "sansbfit")
   , "varpi"      --> "\x1d7c9"
   ]
 
-mathBoldDigamma :: [(String, String)]
-mathBoldDigamma = map (prefix "bf")
+mathBoldDigamma :: [(Keyword, Font, Symbol)]
+mathBoldDigamma = font [bf]
   [ "Digamma" --> "\x1d7ca"
   , "digamma" --> "\x1d7cb"
   ]
   
-mathBoldDigit :: [(String, String)]
-mathBoldDigit = map (prefix "bf")
+mathBoldDigit :: [(Keyword, Font, Symbol)]
+mathBoldDigit = font [bf]
   [ "0" --> "𝟎"
   , "1" --> "𝟏"
   , "2" --> "𝟐"
@@ -1497,8 +1514,8 @@ mathBoldDigit = map (prefix "bf")
   , "9" --> "𝟗"
   ]
 
-mathDoubleStruckDigit :: [(String, String)]
-mathDoubleStruckDigit = map (prefix "bb")
+mathDoubleStruckDigit :: [(Keyword, Font, Symbol)]
+mathDoubleStruckDigit = font [bb]
   [ "0" --> "𝟘"
   , "1" --> "𝟙"
   , "2" --> "𝟚"
@@ -1511,8 +1528,8 @@ mathDoubleStruckDigit = map (prefix "bb")
   , "9" --> "𝟡"
   ]
  
-mathSansSerifDigit :: [(String, String)]
-mathSansSerifDigit = map (prefix "sans")
+mathSansSerifDigit :: [(Keyword, Font, Symbol)]
+mathSansSerifDigit = font [sf]
   [ "0" --> "\x1d7e2"
   , "1" --> "\x1d7e3"
   , "2" --> "\x1d7e4"
@@ -1525,8 +1542,8 @@ mathSansSerifDigit = map (prefix "sans")
   , "9" --> "\x1d7eb"
   ]
   
-mathSansSerifBoldDigit :: [(String, String)]
-mathSansSerifBoldDigit = map (prefix "sansbf")
+mathSansSerifBoldDigit :: [(Keyword, Font, Symbol)]
+mathSansSerifBoldDigit = font [sf, bf]
   [ "0" --> "\x1d7ec"
   , "1" --> "\x1d7ed"
   , "2" --> "\x1d7ee"
@@ -1539,8 +1556,8 @@ mathSansSerifBoldDigit = map (prefix "sansbf")
   , "9" --> "\x1d7f5"
   ]
 
-mathMonospaceDigit :: [(String, String)]
-mathMonospaceDigit = map (prefix "mono")
+mathMonospaceDigit :: [(Keyword, Font, Symbol)]
+mathMonospaceDigit = font [tt]
   [ "0" --> "\x1d7f6"
   , "1" --> "\x1d7f7"
   , "2" --> "\x1d7f8"

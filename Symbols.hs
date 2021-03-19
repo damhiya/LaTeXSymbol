@@ -42,7 +42,7 @@ latexBinaryOperator = font []
   , "wedge" --> "∧"
   , "vee" --> "∨"
   ]
-  
+
 latexRelation :: [Element]
 latexRelation = font []
   [ "leq" --> "≤"
@@ -180,14 +180,27 @@ latexMisc = font []
   , "wp" --> "℘"
   , "hbar" --> "ℏ"
   , "hslash" --> "ℏ"
-  , "Box" --> "□"
   , "square" --> "□"
   , "blacksquare" --> "▪"
   , "triangle" --> "▵"
   , "blacktriangle" --> "▴"
-  , "diamond" --> "⋄"
   , "circ" --> "∘"
   , "qed" --> "∎"
+  , "Box" --> "□"
+  , "Diamond" --> "⋄"
+  , "Join" --> "⋈"
+  , "perp" --> "⊥"
+  , "bot" --> "⊥"
+  , "top" --> "⊤"
+  , "star" --> "⋆"
+  , "vdash" --> "⊢"
+  , "dashv" --> "⊣"
+  , "Vdash" --> "⊩"
+  , "vDash" --> "⊨"
+  , "♮" --> "♮"
+  , "sharp" --> "♯"
+  , "flat" --> "♭"
+  , "&" --> "⅋"
   ]
 
 latexHebrew :: [Element]

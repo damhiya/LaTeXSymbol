@@ -8,6 +8,7 @@ import Symbols
 
 symbols :: [(Keyword, [Style], Symbol)]
 symbols = latexUnaryOperator
+       <> latexBinaryOperator
        <> latexRelation
        <> latexArrow
        <> latexMisc

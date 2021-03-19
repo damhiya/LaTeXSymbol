@@ -33,18 +33,40 @@ latexBinaryOperator :: [Element]
 latexBinaryOperator = font []
   [ "times" --> "×"
   , "div" --> "÷"
+  , "pm" --> "±"
+  , "mp" --> "∓"
   , "cap" --> "∩"
   , "cup" --> "∪"
+  , "uplus" --> "⊎"
   , "sqcap" --> "⊓"
   , "sqcup" --> "⊔"
   , "oplus" --> "⊕"
+  , "ominus" --> "⊖"
   , "otimes" --> "⊗"
+  , "oslash" --> "⊘"
+  , "odot" --> "⊙"
+  , "circledast" --> "⊛"
   , "wedge" --> "∧"
   , "vee" --> "∨"
+  , "circ" --> "∘"
+  , "star" --> "⋆"
+  , "ast" --> "∗"
+  , "dagger" --> "†"
+  , "cdot" --> "·"
+  , "barwedge" --> "⊼"
+  , "veebar" --> "⊻"
+  , "boxplus" --> "⊞"
+  , "boxminus" --> "⊟"
+  , "boxtimes" --> "⊠"
+  , "divideontimes" --> "⋇"
+  , "curlyvee" --> "⋎"
+  , "setminus" --> "∖"
+  , "ltimes" --> "⋉"
+  , "rtimes" --> "⋊"
   ]
 
-latexRelation :: [Element]
-latexRelation = font []
+latexBinaryRelation :: [Element]
+latexBinaryRelation = font []
   [ "leq" --> "≤"
   , "leqq" --> "≦"
   , "leqslant" --> "⩽"
@@ -124,6 +146,11 @@ latexRelation = font []
   , "ncong" --> "≇"
   , "nsimeq" --> "≄"
   , "nsim" --> "≁"
+
+  , "in" --> "∈"
+  , "notin" --> "∉"
+  , "ni" --> "∋"
+  , "notni" --> "∌"
   ]
 
 latexArrow :: [Element] 
@@ -184,23 +211,32 @@ latexMisc = font []
   , "blacksquare" --> "▪"
   , "triangle" --> "▵"
   , "blacktriangle" --> "▴"
-  , "circ" --> "∘"
   , "qed" --> "∎"
   , "Box" --> "□"
   , "Diamond" --> "⋄"
   , "Join" --> "⋈"
+  , "bowtie" --> "⋈"
   , "perp" --> "⊥"
+  , "parallel" --> "∥"
   , "bot" --> "⊥"
   , "top" --> "⊤"
-  , "star" --> "⋆"
   , "vdash" --> "⊢"
   , "dashv" --> "⊣"
   , "Vdash" --> "⊩"
+  , "Vvdash" --> "⊪"
   , "vDash" --> "⊨"
-  , "♮" --> "♮"
+  , "natural" --> "♮"
   , "sharp" --> "♯"
   , "flat" --> "♭"
-  , "&" --> "⅋"
+  , "&" --> "⅋" -- non latex
+  , "therefore" --> "∴"
+  , "because" --> "∵"
+  , "angle" --> "∠"
+  , "ss" --> "ß"
+  , "P" --> "¶"
+  , "S" --> "§"
+  , "ldots" --> "…"
+  , "cdots" --> "⋯"
   ]
 
 latexHebrew :: [Element]
@@ -218,12 +254,24 @@ latexParenthesis = font []
   , "rfloor" --> "⌋"
   , "lceil" --> "⌈"
   , "rceil" --> "⌉"
-  
+   
   , "|" --> "‖"
+  , "ulcorner" --> "⌜"
+  , "urcorner" --> "⌝"
+  , "llcorner" --> "⌞"
+  , "lrcorner" --> "⌟"
   ]
 
 -- | Non-LaTeX Symbols
-superscripts ::[Element] 
+squareQuotation :: [Element]
+squareQuotation = font []
+  [ "squotl" --> "「"
+  , "squotr" --> "」"
+  , "sqquotl" --> "『"
+  , "sqquotr" --> "』"
+  ]
+
+superscripts :: [Element] 
 superscripts = font []
   [ "^0" --> "⁰"
   , "^1" --> "¹"

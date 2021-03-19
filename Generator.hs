@@ -9,12 +9,13 @@ import Symbols
 symbols :: [(Keyword, [Style], Symbol)]
 symbols = latexUnaryOperator
        <> latexBinaryOperator
-       <> latexRelation
+       <> latexBinaryRelation
        <> latexArrow
        <> latexMisc
        <> latexHebrew
        <> latexParenthesis
 
+       <> squareQuotation
        <> superscripts
        <> subscripts
        <> parenthesis

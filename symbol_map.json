@@ -1,5 +1,4 @@
-[ {"keyword":"♮","symbols":[{"style":[],"symbol":"♮"}]}
-, {"keyword":"}}","symbols":[{"style":[],"symbol":"⦄"}]}
+[ {"keyword":"}}","symbols":[{"style":[],"symbol":"⦄"}]}
 , {"keyword":"|)","symbols":[{"style":[],"symbol":"⦈"}]}
 , {"keyword":"|","symbols":[{"style":[],"symbol":"‖"}]}
 , {"keyword":"{{","symbols":[{"style":[],"symbol":"⦃"}]}
@@ -11,6 +10,7 @@
 , {"keyword":"wp","symbols":[{"style":[],"symbol":"℘"}]}
 , {"keyword":"wedge","symbols":[{"style":[],"symbol":"∧"}]}
 , {"keyword":"w","symbols":[{"style":["bf"],"symbol":"𝐰"},{"style":["it"],"symbol":"𝑤"},{"style":["bf","it"],"symbol":"𝒘"},{"style":["scr"],"symbol":"𝓌"},{"style":["cal"],"symbol":"𝔀"},{"style":["frak"],"symbol":"𝔴"},{"style":["bb"],"symbol":"𝕨"},{"style":["bf","frak"],"symbol":"𝖜"},{"style":["sf"],"symbol":"𝗐"},{"style":["sf","bf"],"symbol":"𝘄"},{"style":["sf","it"],"symbol":"𝘸"},{"style":["sf","bf","it"],"symbol":"𝙬"},{"style":["tt"],"symbol":"𝚠"}]}
+, {"keyword":"veebar","symbols":[{"style":[],"symbol":"⊻"}]}
 , {"keyword":"vee","symbols":[{"style":[],"symbol":"∨"}]}
 , {"keyword":"vdash","symbols":[{"style":[],"symbol":"⊢"}]}
 , {"keyword":"vartheta","symbols":[{"style":[],"symbol":"ϑ"},{"style":["bf"],"symbol":"𝛝"},{"style":["it"],"symbol":"𝜗"},{"style":["bf","it"],"symbol":"𝝑"},{"style":["sf","bf"],"symbol":"𝞋"},{"style":["sf","bf","it"],"symbol":"𝟅"}]}
@@ -23,15 +23,19 @@
 , {"keyword":"varTheta","symbols":[{"style":[],"symbol":"ϴ"},{"style":["bf"],"symbol":"𝚹"},{"style":["it"],"symbol":"𝛳"},{"style":["bf","it"],"symbol":"𝜭"},{"style":["sf","bf"],"symbol":"𝝧"},{"style":["sf","bf","it"],"symbol":"𝞡"}]}
 , {"keyword":"vDash","symbols":[{"style":[],"symbol":"⊨"}]}
 , {"keyword":"v","symbols":[{"style":["bf"],"symbol":"𝐯"},{"style":["it"],"symbol":"𝑣"},{"style":["bf","it"],"symbol":"𝒗"},{"style":["scr"],"symbol":"𝓋"},{"style":["cal"],"symbol":"𝓿"},{"style":["frak"],"symbol":"𝔳"},{"style":["bb"],"symbol":"𝕧"},{"style":["bf","frak"],"symbol":"𝖛"},{"style":["sf"],"symbol":"𝗏"},{"style":["sf","bf"],"symbol":"𝘃"},{"style":["sf","it"],"symbol":"𝘷"},{"style":["sf","bf","it"],"symbol":"𝙫"},{"style":["tt"],"symbol":"𝚟"}]}
+, {"keyword":"urcorner","symbols":[{"style":[],"symbol":"⌝"}]}
 , {"keyword":"upsilon","symbols":[{"style":[],"symbol":"υ"},{"style":["bf"],"symbol":"𝛖"},{"style":["it"],"symbol":"𝜐"},{"style":["bf","it"],"symbol":"𝝊"},{"style":["sf","bf"],"symbol":"𝞄"},{"style":["sf","bf","it"],"symbol":"𝞾"}]}
+, {"keyword":"uplus","symbols":[{"style":[],"symbol":"⊎"}]}
 , {"keyword":"updownarrow","symbols":[{"style":[],"symbol":"↕"}]}
 , {"keyword":"uparrow","symbols":[{"style":[],"symbol":"↑"}]}
+, {"keyword":"ulcorner","symbols":[{"style":[],"symbol":"⌜"}]}
 , {"keyword":"u","symbols":[{"style":["bf"],"symbol":"𝐮"},{"style":["it"],"symbol":"𝑢"},{"style":["bf","it"],"symbol":"𝒖"},{"style":["scr"],"symbol":"𝓊"},{"style":["cal"],"symbol":"𝓾"},{"style":["frak"],"symbol":"𝔲"},{"style":["bb"],"symbol":"𝕦"},{"style":["bf","frak"],"symbol":"𝖚"},{"style":["sf"],"symbol":"𝗎"},{"style":["sf","bf"],"symbol":"𝘂"},{"style":["sf","it"],"symbol":"𝘶"},{"style":["sf","bf","it"],"symbol":"𝙪"},{"style":["tt"],"symbol":"𝚞"}]}
 , {"keyword":"triangle","symbols":[{"style":[],"symbol":"▵"}]}
 , {"keyword":"top","symbols":[{"style":[],"symbol":"⊤"}]}
 , {"keyword":"to","symbols":[{"style":[],"symbol":"→"}]}
 , {"keyword":"times","symbols":[{"style":[],"symbol":"×"}]}
 , {"keyword":"theta","symbols":[{"style":[],"symbol":"θ"},{"style":["bf"],"symbol":"𝛉"},{"style":["it"],"symbol":"𝜃"},{"style":["bf","it"],"symbol":"𝜽"},{"style":["sf","bf"],"symbol":"𝝷"},{"style":["sf","bf","it"],"symbol":"𝞱"}]}
+, {"keyword":"therefore","symbols":[{"style":[],"symbol":"∴"}]}
 , {"keyword":"tau","symbols":[{"style":[],"symbol":"τ"},{"style":["bf"],"symbol":"𝛕"},{"style":["it"],"symbol":"𝜏"},{"style":["bf","it"],"symbol":"𝝉"},{"style":["sf","bf"],"symbol":"𝞃"},{"style":["sf","bf","it"],"symbol":"𝞽"}]}
 , {"keyword":"t","symbols":[{"style":["bf"],"symbol":"𝐭"},{"style":["it"],"symbol":"𝑡"},{"style":["bf","it"],"symbol":"𝒕"},{"style":["scr"],"symbol":"𝓉"},{"style":["cal"],"symbol":"𝓽"},{"style":["frak"],"symbol":"𝔱"},{"style":["bb"],"symbol":"𝕥"},{"style":["bf","frak"],"symbol":"𝖙"},{"style":["sf"],"symbol":"𝗍"},{"style":["sf","bf"],"symbol":"𝘁"},{"style":["sf","it"],"symbol":"𝘵"},{"style":["sf","bf","it"],"symbol":"𝙩"},{"style":["tt"],"symbol":"𝚝"}]}
 , {"keyword":"swarrow","symbols":[{"style":[],"symbol":"↙"}]}
@@ -45,19 +49,26 @@
 , {"keyword":"subseteq","symbols":[{"style":[],"symbol":"⊆"}]}
 , {"keyword":"subset","symbols":[{"style":[],"symbol":"⊂"}]}
 , {"keyword":"star","symbols":[{"style":[],"symbol":"⋆"}]}
+, {"keyword":"ss","symbols":[{"style":[],"symbol":"ß"}]}
+, {"keyword":"squotr","symbols":[{"style":[],"symbol":"」"}]}
+, {"keyword":"squotl","symbols":[{"style":[],"symbol":"「"}]}
 , {"keyword":"square","symbols":[{"style":[],"symbol":"□"}]}
 , {"keyword":"sqsupseteq","symbols":[{"style":[],"symbol":"⊒"}]}
 , {"keyword":"sqsupset","symbols":[{"style":[],"symbol":"⊐"}]}
 , {"keyword":"sqsubseteq","symbols":[{"style":[],"symbol":"⊑"}]}
 , {"keyword":"sqsubset","symbols":[{"style":[],"symbol":"⊏"}]}
+, {"keyword":"sqquotr","symbols":[{"style":[],"symbol":"』"}]}
+, {"keyword":"sqquotl","symbols":[{"style":[],"symbol":"『"}]}
 , {"keyword":"sqcup","symbols":[{"style":[],"symbol":"⊔"}]}
 , {"keyword":"sqcap","symbols":[{"style":[],"symbol":"⊓"}]}
 , {"keyword":"simeq","symbols":[{"style":[],"symbol":"≃"}]}
 , {"keyword":"sim","symbols":[{"style":[],"symbol":"∼"}]}
 , {"keyword":"sigma","symbols":[{"style":[],"symbol":"σ"},{"style":["bf"],"symbol":"𝛔"},{"style":["it"],"symbol":"𝜎"},{"style":["bf","it"],"symbol":"𝝈"},{"style":["sf","bf"],"symbol":"𝞂"},{"style":["sf","bf","it"],"symbol":"𝞼"}]}
 , {"keyword":"sharp","symbols":[{"style":[],"symbol":"♯"}]}
+, {"keyword":"setminus","symbols":[{"style":[],"symbol":"∖"}]}
 , {"keyword":"searrow","symbols":[{"style":[],"symbol":"↘"}]}
 , {"keyword":"s","symbols":[{"style":["bf"],"symbol":"𝐬"},{"style":["it"],"symbol":"𝑠"},{"style":["bf","it"],"symbol":"𝒔"},{"style":["scr"],"symbol":"𝓈"},{"style":["cal"],"symbol":"𝓼"},{"style":["frak"],"symbol":"𝔰"},{"style":["bb"],"symbol":"𝕤"},{"style":["bf","frak"],"symbol":"𝖘"},{"style":["sf"],"symbol":"𝗌"},{"style":["sf","bf"],"symbol":"𝘀"},{"style":["sf","it"],"symbol":"𝘴"},{"style":["sf","bf","it"],"symbol":"𝙨"},{"style":["tt"],"symbol":"𝚜"}]}
+, {"keyword":"rtimes","symbols":[{"style":[],"symbol":"⋊"}]}
 , {"keyword":"rightleftharpoons","symbols":[{"style":[],"symbol":"⇋"}]}
 , {"keyword":"rightharpoonup","symbols":[{"style":[],"symbol":"⇀"}]}
 , {"keyword":"rightharpoondown","symbols":[{"style":[],"symbol":"⇁"}]}
@@ -75,15 +86,20 @@
 , {"keyword":"precsim","symbols":[{"style":[],"symbol":"≾"}]}
 , {"keyword":"preceq","symbols":[{"style":[],"symbol":"⪯"}]}
 , {"keyword":"prec","symbols":[{"style":[],"symbol":"≺"}]}
+, {"keyword":"pm","symbols":[{"style":[],"symbol":"±"}]}
 , {"keyword":"pi","symbols":[{"style":[],"symbol":"π"},{"style":["bb"],"symbol":"ℼ"},{"style":["bf"],"symbol":"𝛑"},{"style":["it"],"symbol":"𝜋"},{"style":["bf","it"],"symbol":"𝝅"},{"style":["sf","bf"],"symbol":"𝝿"},{"style":["sf","bf","it"],"symbol":"𝞹"}]}
 , {"keyword":"phi","symbols":[{"style":[],"symbol":"ϕ"},{"style":["bf"],"symbol":"𝛟"},{"style":["it"],"symbol":"𝜙"},{"style":["bf","it"],"symbol":"𝝓"},{"style":["sf","bf"],"symbol":"𝞍"},{"style":["sf","bf","it"],"symbol":"𝟇"}]}
 , {"keyword":"perp","symbols":[{"style":[],"symbol":"⊥"}]}
 , {"keyword":"partial","symbols":[{"style":[],"symbol":"∂"},{"style":["bf"],"symbol":"𝛛"},{"style":["it"],"symbol":"𝜕"},{"style":["bf","it"],"symbol":"𝝏"},{"style":["sf","bf"],"symbol":"𝞉"},{"style":["sf","bf","it"],"symbol":"𝟃"}]}
+, {"keyword":"parallel","symbols":[{"style":[],"symbol":"∥"}]}
 , {"keyword":"p","symbols":[{"style":["bf"],"symbol":"𝐩"},{"style":["it"],"symbol":"𝑝"},{"style":["bf","it"],"symbol":"𝒑"},{"style":["scr"],"symbol":"𝓅"},{"style":["cal"],"symbol":"𝓹"},{"style":["frak"],"symbol":"𝔭"},{"style":["bb"],"symbol":"𝕡"},{"style":["bf","frak"],"symbol":"𝖕"},{"style":["sf"],"symbol":"𝗉"},{"style":["sf","bf"],"symbol":"𝗽"},{"style":["sf","it"],"symbol":"𝘱"},{"style":["sf","bf","it"],"symbol":"𝙥"},{"style":["tt"],"symbol":"𝚙"}]}
 , {"keyword":"otimes","symbols":[{"style":[],"symbol":"⊗"}]}
+, {"keyword":"oslash","symbols":[{"style":[],"symbol":"⊘"}]}
 , {"keyword":"oplus","symbols":[{"style":[],"symbol":"⊕"}]}
+, {"keyword":"ominus","symbols":[{"style":[],"symbol":"⊖"}]}
 , {"keyword":"omicron","symbols":[{"style":[],"symbol":"ο"},{"style":["bf"],"symbol":"𝛐"},{"style":["it"],"symbol":"𝜊"},{"style":["bf","it"],"symbol":"𝝄"},{"style":["sf","bf"],"symbol":"𝝾"},{"style":["sf","bf","it"],"symbol":"𝞸"}]}
 , {"keyword":"omega","symbols":[{"style":[],"symbol":"ω"},{"style":["bf"],"symbol":"𝛚"},{"style":["it"],"symbol":"𝜔"},{"style":["bf","it"],"symbol":"𝝎"},{"style":["sf","bf"],"symbol":"𝞈"},{"style":["sf","bf","it"],"symbol":"𝟂"}]}
+, {"keyword":"odot","symbols":[{"style":[],"symbol":"⊙"}]}
 , {"keyword":"o","symbols":[{"style":["bf"],"symbol":"𝐨"},{"style":["it"],"symbol":"𝑜"},{"style":["bf","it"],"symbol":"𝒐"},{"style":["scr"],"symbol":"ℴ"},{"style":["cal"],"symbol":"𝓸"},{"style":["frak"],"symbol":"𝔬"},{"style":["bb"],"symbol":"𝕠"},{"style":["bf","frak"],"symbol":"𝖔"},{"style":["sf"],"symbol":"𝗈"},{"style":["sf","bf"],"symbol":"𝗼"},{"style":["sf","it"],"symbol":"𝘰"},{"style":["sf","bf","it"],"symbol":"𝙤"},{"style":["tt"],"symbol":"𝚘"}]}
 , {"keyword":"nwarrow","symbols":[{"style":[],"symbol":"↖"}]}
 , {"keyword":"nu","symbols":[{"style":[],"symbol":"ν"},{"style":["bf"],"symbol":"𝛎"},{"style":["it"],"symbol":"𝜈"},{"style":["bf","it"],"symbol":"𝝂"},{"style":["sf","bf"],"symbol":"𝝼"},{"style":["sf","bf","it"],"symbol":"𝞶"}]}
@@ -97,8 +113,11 @@
 , {"keyword":"nsim","symbols":[{"style":[],"symbol":"≁"}]}
 , {"keyword":"npreceq","symbols":[{"style":[],"symbol":"⪯̸"}]}
 , {"keyword":"nprec","symbols":[{"style":[],"symbol":"⊀"}]}
+, {"keyword":"notni","symbols":[{"style":[],"symbol":"∌"}]}
+, {"keyword":"notin","symbols":[{"style":[],"symbol":"∉"}]}
 , {"keyword":"nless","symbols":[{"style":[],"symbol":"≮"}]}
 , {"keyword":"nleq","symbols":[{"style":[],"symbol":"≰"}]}
+, {"keyword":"ni","symbols":[{"style":[],"symbol":"∋"}]}
 , {"keyword":"ngtr","symbols":[{"style":[],"symbol":"≯"}]}
 , {"keyword":"ngeq","symbols":[{"style":[],"symbol":"≱"}]}
 , {"keyword":"nexists","symbols":[{"style":[],"symbol":"∄"}]}
@@ -107,12 +126,16 @@
 , {"keyword":"neg","symbols":[{"style":[],"symbol":"¬"}]}
 , {"keyword":"nearrow","symbols":[{"style":[],"symbol":"↗"}]}
 , {"keyword":"ncong","symbols":[{"style":[],"symbol":"≇"}]}
+, {"keyword":"natural","symbols":[{"style":[],"symbol":"♮"}]}
 , {"keyword":"napprox","symbols":[{"style":[],"symbol":"≉"}]}
 , {"keyword":"nabla","symbols":[{"style":[],"symbol":"∇"},{"style":["bf"],"symbol":"𝛁"},{"style":["it"],"symbol":"𝛻"},{"style":["bf","it"],"symbol":"𝜵"},{"style":["sf","bf"],"symbol":"𝝯"},{"style":["sf","bf","it"],"symbol":"𝞩"}]}
 , {"keyword":"n","symbols":[{"style":["bf"],"symbol":"𝐧"},{"style":["it"],"symbol":"𝑛"},{"style":["bf","it"],"symbol":"𝒏"},{"style":["scr"],"symbol":"𝓃"},{"style":["cal"],"symbol":"𝓷"},{"style":["frak"],"symbol":"𝔫"},{"style":["bb"],"symbol":"𝕟"},{"style":["bf","frak"],"symbol":"𝖓"},{"style":["sf"],"symbol":"𝗇"},{"style":["sf","bf"],"symbol":"𝗻"},{"style":["sf","it"],"symbol":"𝘯"},{"style":["sf","bf","it"],"symbol":"𝙣"},{"style":["tt"],"symbol":"𝚗"}]}
 , {"keyword":"mu","symbols":[{"style":[],"symbol":"μ"},{"style":["bf"],"symbol":"𝛍"},{"style":["it"],"symbol":"𝜇"},{"style":["bf","it"],"symbol":"𝝁"},{"style":["sf","bf"],"symbol":"𝝻"},{"style":["sf","bf","it"],"symbol":"𝞵"}]}
+, {"keyword":"mp","symbols":[{"style":[],"symbol":"∓"}]}
 , {"keyword":"mapsto","symbols":[{"style":[],"symbol":"↦"}]}
 , {"keyword":"m","symbols":[{"style":["bf"],"symbol":"𝐦"},{"style":["it"],"symbol":"𝑚"},{"style":["bf","it"],"symbol":"𝒎"},{"style":["scr"],"symbol":"𝓂"},{"style":["cal"],"symbol":"𝓶"},{"style":["frak"],"symbol":"𝔪"},{"style":["bb"],"symbol":"𝕞"},{"style":["bf","frak"],"symbol":"𝖒"},{"style":["sf"],"symbol":"𝗆"},{"style":["sf","bf"],"symbol":"𝗺"},{"style":["sf","it"],"symbol":"𝘮"},{"style":["sf","bf","it"],"symbol":"𝙢"},{"style":["tt"],"symbol":"𝚖"}]}
+, {"keyword":"ltimes","symbols":[{"style":[],"symbol":"⋉"}]}
+, {"keyword":"lrcorner","symbols":[{"style":[],"symbol":"⌟"}]}
 , {"keyword":"longrightarrow","symbols":[{"style":[],"symbol":"⟶"}]}
 , {"keyword":"longmapsto","symbols":[{"style":[],"symbol":"⟼"}]}
 , {"keyword":"longleftarrow","symbols":[{"style":[],"symbol":"⟵"}]}
@@ -121,6 +144,7 @@
 , {"keyword":"lneq","symbols":[{"style":[],"symbol":"⪇"}]}
 , {"keyword":"lnapprox","symbols":[{"style":[],"symbol":"⪉"}]}
 , {"keyword":"lll","symbols":[{"style":[],"symbol":"⋘"}]}
+, {"keyword":"llcorner","symbols":[{"style":[],"symbol":"⌞"}]}
 , {"keyword":"ll","symbols":[{"style":[],"symbol":"≪"}]}
 , {"keyword":"lfloor","symbols":[{"style":[],"symbol":"⌊"}]}
 , {"keyword":"lesssim","symbols":[{"style":[],"symbol":"≲"}]}
@@ -134,6 +158,7 @@
 , {"keyword":"leftharpoonup","symbols":[{"style":[],"symbol":"↼"}]}
 , {"keyword":"leftharpoondown","symbols":[{"style":[],"symbol":"↽"}]}
 , {"keyword":"leftarrow","symbols":[{"style":[],"symbol":"←"}]}
+, {"keyword":"ldots","symbols":[{"style":[],"symbol":"…"}]}
 , {"keyword":"lceil","symbols":[{"style":[],"symbol":"⌈"}]}
 , {"keyword":"lbag","symbols":[{"style":[],"symbol":"⟅"}]}
 , {"keyword":"langle","symbols":[{"style":[],"symbol":"⟨"}]}
@@ -145,6 +170,7 @@
 , {"keyword":"j","symbols":[{"style":["bf"],"symbol":"𝐣"},{"style":["it"],"symbol":"𝑗"},{"style":["bf","it"],"symbol":"𝒋"},{"style":["scr"],"symbol":"𝒿"},{"style":["cal"],"symbol":"𝓳"},{"style":["frak"],"symbol":"𝔧"},{"style":["bb"],"symbol":"𝕛"},{"style":["bf","frak"],"symbol":"𝖏"},{"style":["sf"],"symbol":"𝗃"},{"style":["sf","bf"],"symbol":"𝗷"},{"style":["sf","it"],"symbol":"𝘫"},{"style":["sf","bf","it"],"symbol":"𝙟"},{"style":["tt"],"symbol":"𝚓"}]}
 , {"keyword":"iota","symbols":[{"style":[],"symbol":"ι"},{"style":["bf"],"symbol":"𝛊"},{"style":["it"],"symbol":"𝜄"},{"style":["bf","it"],"symbol":"𝜾"},{"style":["sf","bf"],"symbol":"𝝸"},{"style":["sf","bf","it"],"symbol":"𝞲"}]}
 , {"keyword":"infty","symbols":[{"style":[],"symbol":"∞"}]}
+, {"keyword":"in","symbols":[{"style":[],"symbol":"∈"}]}
 , {"keyword":"imath","symbols":[{"style":[],"symbol":"ı"},{"style":["it"],"symbol":"𝚤"}]}
 , {"keyword":"i","symbols":[{"style":["bf"],"symbol":"𝐢"},{"style":["it"],"symbol":"𝑖"},{"style":["bf","it"],"symbol":"𝒊"},{"style":["scr"],"symbol":"𝒾"},{"style":["cal"],"symbol":"𝓲"},{"style":["frak"],"symbol":"𝔦"},{"style":["bb"],"symbol":"𝕚"},{"style":["bf","frak"],"symbol":"𝖎"},{"style":["sf"],"symbol":"𝗂"},{"style":["sf","bf"],"symbol":"𝗶"},{"style":["sf","it"],"symbol":"𝘪"},{"style":["sf","bf","it"],"symbol":"𝙞"},{"style":["tt"],"symbol":"𝚒"}]}
 , {"keyword":"hslash","symbols":[{"style":[],"symbol":"ℏ"}]}
@@ -177,24 +203,38 @@
 , {"keyword":"e","symbols":[{"style":["bf"],"symbol":"𝐞"},{"style":["it"],"symbol":"𝑒"},{"style":["bf","it"],"symbol":"𝒆"},{"style":["scr"],"symbol":"ℯ"},{"style":["cal"],"symbol":"𝓮"},{"style":["frak"],"symbol":"𝔢"},{"style":["bb"],"symbol":"𝕖"},{"style":["bf","frak"],"symbol":"𝖊"},{"style":["sf"],"symbol":"𝖾"},{"style":["sf","bf"],"symbol":"𝗲"},{"style":["sf","it"],"symbol":"𝘦"},{"style":["sf","bf","it"],"symbol":"𝙚"},{"style":["tt"],"symbol":"𝚎"}]}
 , {"keyword":"downaroow","symbols":[{"style":[],"symbol":"↓"}]}
 , {"keyword":"doteq","symbols":[{"style":[],"symbol":"≐"}]}
+, {"keyword":"divideontimes","symbols":[{"style":[],"symbol":"⋇"}]}
 , {"keyword":"div","symbols":[{"style":[],"symbol":"÷"}]}
 , {"keyword":"digamma","symbols":[{"style":[],"symbol":"ϝ"},{"style":["bf"],"symbol":"𝟋"}]}
 , {"keyword":"delta","symbols":[{"style":[],"symbol":"δ"},{"style":["bf"],"symbol":"𝛅"},{"style":["it"],"symbol":"𝛿"},{"style":["bf","it"],"symbol":"𝜹"},{"style":["sf","bf"],"symbol":"𝝳"},{"style":["sf","bf","it"],"symbol":"𝞭"}]}
 , {"keyword":"dashv","symbols":[{"style":[],"symbol":"⊣"}]}
+, {"keyword":"dagger","symbols":[{"style":[],"symbol":"†"}]}
 , {"keyword":"d","symbols":[{"style":["bf"],"symbol":"𝐝"},{"style":["it"],"symbol":"𝑑"},{"style":["bf","it"],"symbol":"𝒅"},{"style":["scr"],"symbol":"𝒹"},{"style":["cal"],"symbol":"𝓭"},{"style":["frak"],"symbol":"𝔡"},{"style":["bb"],"symbol":"𝕕"},{"style":["bf","frak"],"symbol":"𝖉"},{"style":["sf"],"symbol":"𝖽"},{"style":["sf","bf"],"symbol":"𝗱"},{"style":["sf","it"],"symbol":"𝘥"},{"style":["sf","bf","it"],"symbol":"𝙙"},{"style":["tt"],"symbol":"𝚍"}]}
+, {"keyword":"curlyvee","symbols":[{"style":[],"symbol":"⋎"}]}
 , {"keyword":"cup","symbols":[{"style":[],"symbol":"∪"}]}
 , {"keyword":"cong","symbols":[{"style":[],"symbol":"≅"}]}
+, {"keyword":"circledast","symbols":[{"style":[],"symbol":"⊛"}]}
 , {"keyword":"circ","symbols":[{"style":[],"symbol":"∘"}]}
 , {"keyword":"chi","symbols":[{"style":[],"symbol":"χ"},{"style":["bf"],"symbol":"𝛘"},{"style":["it"],"symbol":"𝜒"},{"style":["bf","it"],"symbol":"𝝌"},{"style":["sf","bf"],"symbol":"𝞆"},{"style":["sf","bf","it"],"symbol":"𝟀"}]}
+, {"keyword":"cdots","symbols":[{"style":[],"symbol":"⋯"}]}
+, {"keyword":"cdot","symbols":[{"style":[],"symbol":"·"}]}
 , {"keyword":"cap","symbols":[{"style":[],"symbol":"∩"}]}
 , {"keyword":"c","symbols":[{"style":["bf"],"symbol":"𝐜"},{"style":["it"],"symbol":"𝑐"},{"style":["bf","it"],"symbol":"𝒄"},{"style":["scr"],"symbol":"𝒸"},{"style":["cal"],"symbol":"𝓬"},{"style":["frak"],"symbol":"𝔠"},{"style":["bb"],"symbol":"𝕔"},{"style":["bf","frak"],"symbol":"𝖈"},{"style":["sf"],"symbol":"𝖼"},{"style":["sf","bf"],"symbol":"𝗰"},{"style":["sf","it"],"symbol":"𝘤"},{"style":["sf","bf","it"],"symbol":"𝙘"},{"style":["tt"],"symbol":"𝚌"}]}
+, {"keyword":"boxtimes","symbols":[{"style":[],"symbol":"⊠"}]}
+, {"keyword":"boxplus","symbols":[{"style":[],"symbol":"⊞"}]}
+, {"keyword":"boxminus","symbols":[{"style":[],"symbol":"⊟"}]}
+, {"keyword":"bowtie","symbols":[{"style":[],"symbol":"⋈"}]}
 , {"keyword":"bot","symbols":[{"style":[],"symbol":"⊥"}]}
 , {"keyword":"blacktriangle","symbols":[{"style":[],"symbol":"▴"}]}
 , {"keyword":"blacksquare","symbols":[{"style":[],"symbol":"▪"}]}
 , {"keyword":"beth","symbols":[{"style":[],"symbol":"ℶ"}]}
 , {"keyword":"beta","symbols":[{"style":[],"symbol":"β"},{"style":["bf"],"symbol":"𝛃"},{"style":["it"],"symbol":"𝛽"},{"style":["bf","it"],"symbol":"𝜷"},{"style":["sf","bf"],"symbol":"𝝱"},{"style":["sf","bf","it"],"symbol":"𝞫"}]}
+, {"keyword":"because","symbols":[{"style":[],"symbol":"∵"}]}
+, {"keyword":"barwedge","symbols":[{"style":[],"symbol":"⊼"}]}
 , {"keyword":"b","symbols":[{"style":["bf"],"symbol":"𝐛"},{"style":["it"],"symbol":"𝑏"},{"style":["bf","it"],"symbol":"𝒃"},{"style":["scr"],"symbol":"𝒷"},{"style":["cal"],"symbol":"𝓫"},{"style":["frak"],"symbol":"𝔟"},{"style":["bb"],"symbol":"𝕓"},{"style":["bf","frak"],"symbol":"𝖇"},{"style":["sf"],"symbol":"𝖻"},{"style":["sf","bf"],"symbol":"𝗯"},{"style":["sf","it"],"symbol":"𝘣"},{"style":["sf","bf","it"],"symbol":"𝙗"},{"style":["tt"],"symbol":"𝚋"}]}
+, {"keyword":"ast","symbols":[{"style":[],"symbol":"∗"}]}
 , {"keyword":"approx","symbols":[{"style":[],"symbol":"≈"}]}
+, {"keyword":"angle","symbols":[{"style":[],"symbol":"∠"}]}
 , {"keyword":"alpha","symbols":[{"style":[],"symbol":"α"},{"style":["bf"],"symbol":"𝛂"},{"style":["it"],"symbol":"𝛼"},{"style":["bf","it"],"symbol":"𝜶"},{"style":["sf","bf"],"symbol":"𝝰"},{"style":["sf","bf","it"],"symbol":"𝞪"}]}
 , {"keyword":"aleph","symbols":[{"style":[],"symbol":"ℵ"}]}
 , {"keyword":"a","symbols":[{"style":["bf"],"symbol":"𝐚"},{"style":["it"],"symbol":"𝑎"},{"style":["bf","it"],"symbol":"𝒂"},{"style":["scr"],"symbol":"𝒶"},{"style":["cal"],"symbol":"𝓪"},{"style":["frak"],"symbol":"𝔞"},{"style":["bb"],"symbol":"𝕒"},{"style":["bf","frak"],"symbol":"𝖆"},{"style":["sf"],"symbol":"𝖺"},{"style":["sf","bf"],"symbol":"𝗮"},{"style":["sf","it"],"symbol":"𝘢"},{"style":["sf","bf","it"],"symbol":"𝙖"},{"style":["tt"],"symbol":"𝚊"}]}
@@ -313,6 +353,7 @@
 , {"keyword":"Xi","symbols":[{"style":[],"symbol":"Ξ"},{"style":["bf"],"symbol":"𝚵"},{"style":["it"],"symbol":"𝛯"},{"style":["bf","it"],"symbol":"𝜩"},{"style":["sf","bf"],"symbol":"𝝣"},{"style":["sf","bf","it"],"symbol":"𝞝"}]}
 , {"keyword":"X","symbols":[{"style":["bf"],"symbol":"𝐗"},{"style":["it"],"symbol":"𝑋"},{"style":["bf","it"],"symbol":"𝑿"},{"style":["scr"],"symbol":"𝒳"},{"style":["cal"],"symbol":"𝓧"},{"style":["frak"],"symbol":"𝔛"},{"style":["bb"],"symbol":"𝕏"},{"style":["bf","frak"],"symbol":"𝖃"},{"style":["sf"],"symbol":"𝖷"},{"style":["sf","bf"],"symbol":"𝗫"},{"style":["sf","it"],"symbol":"𝘟"},{"style":["sf","bf","it"],"symbol":"𝙓"},{"style":["tt"],"symbol":"𝚇"}]}
 , {"keyword":"W","symbols":[{"style":["bf"],"symbol":"𝐖"},{"style":["it"],"symbol":"𝑊"},{"style":["bf","it"],"symbol":"𝑾"},{"style":["scr"],"symbol":"𝒲"},{"style":["cal"],"symbol":"𝓦"},{"style":["frak"],"symbol":"𝔚"},{"style":["bb"],"symbol":"𝕎"},{"style":["bf","frak"],"symbol":"𝖂"},{"style":["sf"],"symbol":"𝖶"},{"style":["sf","bf"],"symbol":"𝗪"},{"style":["sf","it"],"symbol":"𝘞"},{"style":["sf","bf","it"],"symbol":"𝙒"},{"style":["tt"],"symbol":"𝚆"}]}
+, {"keyword":"Vvdash","symbols":[{"style":[],"symbol":"⊪"}]}
 , {"keyword":"Vdash","symbols":[{"style":[],"symbol":"⊩"}]}
 , {"keyword":"V","symbols":[{"style":["bf"],"symbol":"𝐕"},{"style":["it"],"symbol":"𝑉"},{"style":["bf","it"],"symbol":"𝑽"},{"style":["scr"],"symbol":"𝒱"},{"style":["cal"],"symbol":"𝓥"},{"style":["frak"],"symbol":"𝔙"},{"style":["bb"],"symbol":"𝕍"},{"style":["bf","frak"],"symbol":"𝖁"},{"style":["sf"],"symbol":"𝖵"},{"style":["sf","bf"],"symbol":"𝗩"},{"style":["sf","it"],"symbol":"𝘝"},{"style":["sf","bf","it"],"symbol":"𝙑"},{"style":["tt"],"symbol":"𝚅"}]}
 , {"keyword":"Upsilon","symbols":[{"style":[],"symbol":"Υ"},{"style":["bf"],"symbol":"𝚼"},{"style":["it"],"symbol":"𝛶"},{"style":["bf","it"],"symbol":"𝜰"},{"style":["sf","bf"],"symbol":"𝝪"},{"style":["sf","bf","it"],"symbol":"𝞤"}]}
@@ -323,7 +364,7 @@
 , {"keyword":"Tau","symbols":[{"style":[],"symbol":"Τ"},{"style":["bf"],"symbol":"𝚻"},{"style":["it"],"symbol":"𝛵"},{"style":["bf","it"],"symbol":"𝜯"},{"style":["sf","bf"],"symbol":"𝝩"},{"style":["sf","bf","it"],"symbol":"𝞣"}]}
 , {"keyword":"T","symbols":[{"style":["bf"],"symbol":"𝐓"},{"style":["it"],"symbol":"𝑇"},{"style":["bf","it"],"symbol":"𝑻"},{"style":["scr"],"symbol":"𝒯"},{"style":["cal"],"symbol":"𝓣"},{"style":["frak"],"symbol":"𝔗"},{"style":["bb"],"symbol":"𝕋"},{"style":["bf","frak"],"symbol":"𝕿"},{"style":["sf"],"symbol":"𝖳"},{"style":["sf","bf"],"symbol":"𝗧"},{"style":["sf","it"],"symbol":"𝘛"},{"style":["sf","bf","it"],"symbol":"𝙏"},{"style":["tt"],"symbol":"𝚃"}]}
 , {"keyword":"Sigma","symbols":[{"style":[],"symbol":"Σ"},{"style":["bb"],"symbol":"⅀"},{"style":["bf"],"symbol":"𝚺"},{"style":["it"],"symbol":"𝛴"},{"style":["bf","it"],"symbol":"𝜮"},{"style":["sf","bf"],"symbol":"𝝨"},{"style":["sf","bf","it"],"symbol":"𝞢"}]}
-, {"keyword":"S","symbols":[{"style":["bf"],"symbol":"𝐒"},{"style":["it"],"symbol":"𝑆"},{"style":["bf","it"],"symbol":"𝑺"},{"style":["scr"],"symbol":"𝒮"},{"style":["cal"],"symbol":"𝓢"},{"style":["frak"],"symbol":"𝔖"},{"style":["bb"],"symbol":"𝕊"},{"style":["bf","frak"],"symbol":"𝕾"},{"style":["sf"],"symbol":"𝖲"},{"style":["sf","bf"],"symbol":"𝗦"},{"style":["sf","it"],"symbol":"𝘚"},{"style":["sf","bf","it"],"symbol":"𝙎"},{"style":["tt"],"symbol":"𝚂"}]}
+, {"keyword":"S","symbols":[{"style":[],"symbol":"§"},{"style":["bf"],"symbol":"𝐒"},{"style":["it"],"symbol":"𝑆"},{"style":["bf","it"],"symbol":"𝑺"},{"style":["scr"],"symbol":"𝒮"},{"style":["cal"],"symbol":"𝓢"},{"style":["frak"],"symbol":"𝔖"},{"style":["bb"],"symbol":"𝕊"},{"style":["bf","frak"],"symbol":"𝕾"},{"style":["sf"],"symbol":"𝖲"},{"style":["sf","bf"],"symbol":"𝗦"},{"style":["sf","it"],"symbol":"𝘚"},{"style":["sf","bf","it"],"symbol":"𝙎"},{"style":["tt"],"symbol":"𝚂"}]}
 , {"keyword":"Rightarrow","symbols":[{"style":[],"symbol":"⇒"}]}
 , {"keyword":"Rho","symbols":[{"style":[],"symbol":"Ρ"},{"style":["bf"],"symbol":"𝚸"},{"style":["it"],"symbol":"𝛲"},{"style":["bf","it"],"symbol":"𝜬"},{"style":["sf","bf"],"symbol":"𝝦"},{"style":["sf","bf","it"],"symbol":"𝞠"}]}
 , {"keyword":"Re","symbols":[{"style":[],"symbol":"ℜ"}]}
@@ -332,7 +373,7 @@
 , {"keyword":"Psi","symbols":[{"style":[],"symbol":"Ψ"},{"style":["bf"],"symbol":"𝚿"},{"style":["it"],"symbol":"𝛹"},{"style":["bf","it"],"symbol":"𝜳"},{"style":["sf","bf"],"symbol":"𝝭"},{"style":["sf","bf","it"],"symbol":"𝞧"}]}
 , {"keyword":"Pi","symbols":[{"style":[],"symbol":"Π"},{"style":["bb"],"symbol":"ℿ"},{"style":["bf"],"symbol":"𝚷"},{"style":["it"],"symbol":"𝛱"},{"style":["bf","it"],"symbol":"𝜫"},{"style":["sf","bf"],"symbol":"𝝥"},{"style":["sf","bf","it"],"symbol":"𝞟"}]}
 , {"keyword":"Phi","symbols":[{"style":[],"symbol":"Φ"},{"style":["bf"],"symbol":"𝚽"},{"style":["it"],"symbol":"𝛷"},{"style":["bf","it"],"symbol":"𝜱"},{"style":["sf","bf"],"symbol":"𝝫"},{"style":["sf","bf","it"],"symbol":"𝞥"}]}
-, {"keyword":"P","symbols":[{"style":["bf"],"symbol":"𝐏"},{"style":["it"],"symbol":"𝑃"},{"style":["bf","it"],"symbol":"𝑷"},{"style":["scr"],"symbol":"𝒫"},{"style":["cal"],"symbol":"𝓟"},{"style":["frak"],"symbol":"𝔓"},{"style":["bb"],"symbol":"ℙ"},{"style":["bf","frak"],"symbol":"𝕻"},{"style":["sf"],"symbol":"𝖯"},{"style":["sf","bf"],"symbol":"𝗣"},{"style":["sf","it"],"symbol":"𝘗"},{"style":["sf","bf","it"],"symbol":"𝙋"},{"style":["tt"],"symbol":"𝙿"}]}
+, {"keyword":"P","symbols":[{"style":[],"symbol":"¶"},{"style":["bf"],"symbol":"𝐏"},{"style":["it"],"symbol":"𝑃"},{"style":["bf","it"],"symbol":"𝑷"},{"style":["scr"],"symbol":"𝒫"},{"style":["cal"],"symbol":"𝓟"},{"style":["frak"],"symbol":"𝔓"},{"style":["bb"],"symbol":"ℙ"},{"style":["bf","frak"],"symbol":"𝕻"},{"style":["sf"],"symbol":"𝖯"},{"style":["sf","bf"],"symbol":"𝗣"},{"style":["sf","it"],"symbol":"𝘗"},{"style":["sf","bf","it"],"symbol":"𝙋"},{"style":["tt"],"symbol":"𝙿"}]}
 , {"keyword":"Omicron","symbols":[{"style":[],"symbol":"Ο"},{"style":["bf"],"symbol":"𝚶"},{"style":["it"],"symbol":"𝛰"},{"style":["bf","it"],"symbol":"𝜪"},{"style":["sf","bf"],"symbol":"𝝤"},{"style":["sf","bf","it"],"symbol":"𝞞"}]}
 , {"keyword":"Omega","symbols":[{"style":[],"symbol":"Ω"},{"style":["bf"],"symbol":"𝛀"},{"style":["it"],"symbol":"𝛺"},{"style":["bf","it"],"symbol":"𝜴"},{"style":["sf","bf"],"symbol":"𝝮"},{"style":["sf","bf","it"],"symbol":"𝞨"}]}
 , {"keyword":"O","symbols":[{"style":["bf"],"symbol":"𝐎"},{"style":["it"],"symbol":"𝑂"},{"style":["bf","it"],"symbol":"𝑶"},{"style":["scr"],"symbol":"𝒪"},{"style":["cal"],"symbol":"𝓞"},{"style":["frak"],"symbol":"𝔒"},{"style":["bb"],"symbol":"𝕆"},{"style":["bf","frak"],"symbol":"𝕺"},{"style":["sf"],"symbol":"𝖮"},{"style":["sf","bf"],"symbol":"𝗢"},{"style":["sf","it"],"symbol":"𝘖"},{"style":["sf","bf","it"],"symbol":"𝙊"},{"style":["tt"],"symbol":"𝙾"}]}

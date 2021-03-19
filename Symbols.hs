@@ -395,6 +395,16 @@ greek = font []
   , "epsilon"    --> "\x03f5"
   ]
 
+-- | Letterlike Symbols
+doubleStruckGreek :: [Element]
+doubleStruckGreek = font [bb]
+  [ "pi" --> "ℼ"
+  , "gamma" --> "ℽ"
+  , "Gamma" --> "ℾ"
+  , "Pi" --> "ℿ"
+  , "Sigma" --> "⅀"
+  ]
+
 -- | Mathematical Alphanumeric Symbols
 -- bold
 -- italic
@@ -518,8 +528,7 @@ mathItalic = font [it]
   , "e" --> "\x1d452" -- 𝑒
   , "f" --> "\x1d453" -- 𝑓
   , "g" --> "\x1d454" -- 𝑔
-  -- , "h" --> "\x1d455" -- ℎ
-  -- there is no "Mathematical Italic Small H"
+  , "h" --> "ℎ" -- ℎ
   , "i" --> "\x1d456" -- 𝑖
   , "j" --> "\x1d457" -- 𝑗
   , "k" --> "\x1d458" -- 𝑘

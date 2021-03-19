@@ -18,6 +18,7 @@ symbols = latexUnaryOperator
        <> subscripts
        <> parenthesis
        <> greek
+       <> doubleStruckGreek
        <> mathBold
        <> mathItalic
        <> mathBoldItalic

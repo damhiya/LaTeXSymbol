@@ -435,7 +435,7 @@ greek ::[Element]
 greek = font []
   [ "Alpha"      --> "\x0391"
   , "Beta"       --> "\x0392"
-  , "Gammma"     --> "\x0393"
+  , "Gamma"     --> "\x0393"
   , "Delta"      --> "\x0394"
   , "Epsilon"    --> "\x0395"
   , "Zeta"       --> "\x0396"
@@ -1286,7 +1286,7 @@ mathBoldGreek :: [Element]
 mathBoldGreek = font [bf]
   [ "Alpha"      --> "\x1d6a8"
   , "Beta"       --> "\x1d6a9"
-  , "Gammma"     --> "\x1d6aa"
+  , "Gamma"     --> "\x1d6aa"
   , "Delta"      --> "\x1d6ab"
   , "Epsilon"    --> "\x1d6ac"
   , "Zeta"       --> "\x1d6ad"
@@ -1350,7 +1350,7 @@ mathItalicGreek :: [Element]
 mathItalicGreek = font [it]
   [ "Alpha"      --> "\x1d6e2"
   , "Beta"       --> "\x1d6e3"
-  , "Gammma"     --> "\x1d6e4"
+  , "Gamma"     --> "\x1d6e4"
   , "Delta"      --> "\x1d6e5"
   , "Epsilon"    --> "\x1d6e6"
   , "Zeta"       --> "\x1d6e7"
@@ -1414,7 +1414,7 @@ mathBoldItalicGreek :: [Element]
 mathBoldItalicGreek = font [bf, it]
   [ "Alpha"      --> "\x1d71c"
   , "Beta"       --> "\x1d71d"
-  , "Gammma"     --> "\x1d71e"
+  , "Gamma"     --> "\x1d71e"
   , "Delta"      --> "\x1d71f"
   , "Epsilon"    --> "\x1d720"
   , "Zeta"       --> "\x1d721"
@@ -1478,7 +1478,7 @@ mathSansSerifBoldGreek :: [Element]
 mathSansSerifBoldGreek = font [sf, bf]
   [ "Alpha"      --> "\x1d756"
   , "Beta"       --> "\x1d757"
-  , "Gammma"     --> "\x1d758"
+  , "Gamma"     --> "\x1d758"
   , "Delta"      --> "\x1d759"
   , "Epsilon"    --> "\x1d75a"
   , "Zeta"       --> "\x1d75b"
@@ -1542,7 +1542,7 @@ mathSansSerifBoldItalicGreek :: [Element]
 mathSansSerifBoldItalicGreek = font [sf, bf, it]
   [ "Alpha"      --> "\x1d790"
   , "Beta"       --> "\x1d791"
-  , "Gammma"     --> "\x1d792"
+  , "Gamma"     --> "\x1d792"
   , "Delta"      --> "\x1d793"
   , "Epsilon"    --> "\x1d794"
   , "Zeta"       --> "\x1d795"
